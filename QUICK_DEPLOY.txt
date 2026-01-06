@@ -1,0 +1,49 @@
+KANDU APP - QUICK DEPLOY GUIDE
+==============================
+
+OPTION 1: DRAG & DROP (Fastest)
+-------------------------------
+1. Open Terminal/PowerShell
+2. cd C:\Projects\kandu-app
+3. npm run build
+4. Go to https://app.netlify.com
+5. Drag the "out" folder into the Netlify drop zone
+6. Done! Your app is live
+
+OPTION 2: NETLIFY CLI
+---------------------
+1. npm install -g netlify-cli
+2. npm run build
+3. netlify deploy --prod --dir=out
+4. Follow prompts
+5. Done!
+
+OPTION 3: GIT INTEGRATION (Recommended for updates)
+----------------------------------------------------
+1. Push code to GitHub
+2. Go to Netlify → New Site from Git
+3. Connect your GitHub repo
+4. Build Command: npm run build
+5. Publish Directory: out
+6. Click Deploy
+7. Done! Auto-deploys on future git pushes
+
+WHAT TO TEST AFTER DEPLOY
+--------------------------
+□ Click "Start Practice" on Home
+□ Move check-in slider & submit
+□ Go to SOS, click a struggle button
+□ Rate a strategy
+□ Go to Stream, click a Rest item
+□ Check Profile & verify streak
+□ Open DevTools → Local Storage → see your data
+□ Reload page → data persists
+
+YOUR LIVE URL WILL BE:
+appname.netlify.app (or your custom domain)
+
+NEED HELP?
+----------
+See DEPLOYMENT.md for detailed instructions
+See USER_GUIDE.md for feature walkthroughs
+See DEVELOPMENT_SUMMARY.md for full documentation
