@@ -1,65 +1,130 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { MessageCircle, ChevronRight } from "lucide-react";
-
-const COMMON_STRUGGLES = [
-  { emoji: "🦷", label: "Biting" },
-  { emoji: "👊", label: "Hitting" },
-  { emoji: "😡", label: "Tantrums" },
-  { emoji: "🧸", label: "Sharing" },
-  { emoji: "🥦", label: "Eating" },
-  { emoji: "💤", label: "Sleep" },
-  { emoji: "✈️", label: "Travel" },
-  { emoji: "🛁", label: "Bath Time" },
-];
+import { useState } from 'react';
+import { GUIDES, COMMON_STRUGGLES_LIST } from '@/data/guides';
+import { useUserData } from '@/hooks/useUserData';
+import BottomNav from '@/components/BottomNav';
 
 export default function SOSPage() {
-  const [input, setInput] = useState("");
+  const [selectedStruggle, setSelectedStruggle] = useState<string | null>(null);
+  const [selectedStrategyId, setSelectedStrategyId] = useState<string | null>(null);
+  const { rateStrategy } = useUserData();
+
+  const guide = selectedStruggle ? GUIDES[selectedStruggle] : null;
+  const selectedStrategy = guide?.strategies.find((s) => s.id === selectedStrategyId);
+
+  const handleRateStrategy = (rating: number) => {
+    if (selectedStrategyId) {
+      rateStrategy(selectedStrategyId, rating);
+      setSelectedStrategyId(null);
+      setSelectedStruggle(null);
+    }
+  };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
-      {/* Teal Header */}
-      <div className="bg-gradient-to-br from-pink-500 to-rose-400 text-white px-6 py-8">
-        <h1 className="text-2xl font-bold mb-1">In the Moment Support</h1>
-        <p className="text-white/90 text-sm">We've got you.</p>
+    <div className="pb-20">
+      {/* Header */}
+      <div className="bg-sos-600 text-white p-6 rounded-b-2xl">
+        <h1 className="text-2xl font-black mb-2">🆘 SOS Mode</h1>
+        <p className="text-sos-100 text-sm">Immediate support when challenges happen</p>
       </div>
 
-      {/* Quick Chips Grid */}
-      <div className="px-6 grid grid-cols-4 gap-2 mb-8 mt-6">
-        {COMMON_STRUGGLES.map((item) => (
-          <button 
-            key={item.label}
-            className="bg-white p-3 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center justify-center gap-2 hover:border-primary hover:shadow-md transition group"
-          >
-            <span className="text-2xl">{item.emoji}</span>
-            <span className="font-medium text-gray-700 group-hover:text-primary transition text-xs text-center leading-tight">{item.label}</span>
-          </button>
-        ))}
+      {/* Content */}
+      <div className="p-6">
+        {!selectedStruggle ? (
+          // List of struggles
+          <div className="grid grid-cols-2 gap-3">
+            {COMMON_STRUGGLES_LIST.map(({ emoji, label }) => (
+              <button
+                key={label}
+                onClick={() => setSelectedStruggle(label)}
+                className="flex flex-col items-center gap-2 p-4 bg-gray-50 hover:bg-sos-50 border-2 border-gray-200 hover:border-sos-300 rounded-lg transition"
+              >
+                <span className="text-3xl">{emoji}</span>
+                <span className="text-sm font-semibold text-gray-900">{label}</span>
+              </button>
+            ))}
+          </div>
+        ) : guide ? (
+          // Strategies for selected struggle
+          <div className="space-y-4">
+            <button
+              onClick={() => setSelectedStruggle(null)}
+              className="text-sos-600 text-sm font-semibold hover:underline"
+            >
+              ← Back
+            </button>
+
+            <h2 className="text-xl font-black text-gray-900">{guide.emoji} {guide.label}</h2>
+
+            {!selectedStrategyId ? (
+              <div className="space-y-3">
+                {guide.strategies.map((strategy) => (
+                  <button
+                    key={strategy.id}
+                    onClick={() => setSelectedStrategyId(strategy.id)}
+                    className="w-full p-4 text-left bg-sos-50 border-2 border-sos-200 rounded-lg hover:bg-sos-100 transition"
+                  >
+                    <h3 className="font-bold text-gray-900 mb-1">{strategy.name}</h3>
+                    <p className="text-sm text-gray-600">{strategy.why}</p>
+                  </button>
+                ))}
+              </div>
+            ) : selectedStrategy ? (
+              // Strategy details
+              <div className="space-y-4 bg-sos-50 p-4 rounded-lg border-2 border-sos-200">
+                <h3 className="text-lg font-bold text-gray-900">{selectedStrategy.name}</h3>
+
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Steps:</h4>
+                  <ol className="space-y-2">
+                    {selectedStrategy.steps.map((step, i) => (
+                      <li key={i} className="flex gap-3 text-sm text-gray-700">
+                        <span className="font-bold text-sos-600">{i + 1}</span>
+                        <span>{step}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+
+                <div className="bg-white p-3 rounded-lg border border-sos-200">
+                  <p className="text-sm text-gray-700">
+                    <span className="font-semibold">Why: </span>
+                    {selectedStrategy.why}
+                  </p>
+                </div>
+
+                <div className="space-y-2">
+                  <p className="text-sm font-semibold text-gray-900">Did this work?</p>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => handleRateStrategy(5)}
+                      className="flex-1 py-2 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600 transition"
+                    >
+                      ✓ It Worked!
+                    </button>
+                    <button
+                      onClick={() => handleRateStrategy(1)}
+                      className="flex-1 py-2 bg-red-500 text-white rounded-lg font-semibold hover:bg-red-600 transition"
+                    >
+                      ✗ Didn't Work
+                    </button>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => setSelectedStrategyId(null)}
+                  className="w-full py-2 bg-gray-200 text-gray-900 rounded-lg font-semibold hover:bg-gray-300 transition"
+                >
+                  Try Another
+                </button>
+              </div>
+            ) : null}
+          </div>
+        ) : null}
       </div>
 
-      {/* Chat Area */}
-      <div className="flex-1 px-6 py-12 flex flex-col justify-center items-center text-center">
-        <div className="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mb-4">
-          <MessageCircle size={32} className="text-rose-500" />
-        </div>
-        <h2 className="text-xl font-bold text-gray-900 mb-2">What's happening?</h2>
-        <p className="text-gray-600 text-sm max-w-sm mb-8">Select a topic above or describe what's going on. We'll give you immediate, judgment-free support.</p>
-
-        {/* Input Area */}
-        <div className="w-full px-2 relative">
-          <input 
-            type="text" 
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Type what's happening..."
-            className="w-full bg-white border-2 border-gray-200 rounded-full py-3 pl-5 pr-12 focus:ring-2 focus:ring-rose-300 focus:border-rose-400 outline-none text-gray-800 shadow-sm transition"
-          />
-          <button className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-rose-400 hover:bg-rose-500 text-white rounded-full shadow-md transition">
-            <ChevronRight size={20} />
-          </button>
-        </div>
-      </div>
+      <BottomNav />
     </div>
   );
 }

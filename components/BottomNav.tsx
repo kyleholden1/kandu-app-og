@@ -1,38 +1,40 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Zap, Wind, BookOpen } from "lucide-react";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { AlertCircle, Wind, Lightbulb } from 'lucide-react';
 
 export default function BottomNav() {
   const pathname = usePathname();
 
-  const isActive = (path: string) => pathname === path;
+  const navItems = [
+    { href: '/sos', label: 'SOS', icon: AlertCircle, color: 'sos' },
+    { href: '/restore', label: 'Restore', icon: Wind, color: 'teal' },
+    { href: '/learn', label: 'Learn', icon: Lightbulb, color: 'blue' },
+  ];
 
   return (
-    <nav className="border-t border-gray-200 bg-white">
-      <div className="px-6 py-4 flex justify-between items-center gap-4">
-        <Link href="/sos" className={`flex flex-col items-center gap-1 flex-1 transition ${isActive('/sos') ? 'text-red-500' : 'text-gray-300'}`}>
-          <div className={`p-2.5 rounded-full transition ${isActive('/sos') ? 'bg-red-50' : ''}`}>
-            <Zap size={24} fill={isActive('/sos') ? "currentColor" : "none"} />
-          </div>
-          <span className="text-xs font-semibold">SOS</span>
-        </Link>
-
-        <Link href="/restore" className={`flex flex-col items-center gap-1 flex-1 transition ${isActive('/restore') ? 'text-teal-600' : 'text-gray-300'}`}>
-          <div className={`p-2.5 rounded-full transition ${isActive('/restore') ? 'bg-teal-50' : ''}`}>
-            <Wind size={24} />
-          </div>
-          <span className="text-xs font-semibold">Restore</span>
-        </Link>
-
-        <Link href="/learn" className={`flex flex-col items-center gap-1 flex-1 transition ${isActive('/learn') ? 'text-blue-600' : 'text-gray-300'}`}>
-          <div className={`p-2.5 rounded-full transition ${isActive('/learn') ? 'bg-blue-50' : ''}`}>
-            <BookOpen size={24} />
-          </div>
-          <span className="text-xs font-semibold">Learn</span>
-        </Link>
-      </div>
+    <nav className="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white border-t border-gray-200 flex">
+      {navItems.map(({ href, label, icon: Icon, color }) => {
+        const isActive = pathname === href;
+        const colors: Record<string, { active: string; inactive: string }> = {
+          sos: { active: 'text-sos-600', inactive: 'text-gray-400' },
+          teal: { active: 'text-teal-600', inactive: 'text-gray-400' },
+          blue: { active: 'text-blue-600', inactive: 'text-gray-400' },
+        };
+        return (
+          <Link
+            key={href}
+            href={href}
+            className={`flex-1 py-3 px-2 flex flex-col items-center gap-1 transition ${
+              isActive ? colors[color].active : colors[color].inactive
+            }`}
+          >
+            <Icon size={24} />
+            <span className="text-xs font-semibold">{label}</span>
+          </Link>
+        );
+      })}
     </nav>
   );
 }

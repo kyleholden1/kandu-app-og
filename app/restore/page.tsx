@@ -1,76 +1,172 @@
-import { PlayCircle, PauseCircle, BookOpen, Wind } from "lucide-react";
+'use client';
 
-const REST_CHANNELS = [
-  { title: "The 5-Min Reset", color: "bg-teal-100 text-teal-800" },
-  { title: "Deep Breathing", color: "bg-indigo-100 text-indigo-800" },
-  { title: "Walking Meditation", color: "bg-green-100 text-green-800" },
-  { title: "Sleep Prep", color: "bg-purple-100 text-purple-800" },
+import { useState } from 'react';
+import { useUserData } from '@/hooks/useUserData';
+import BottomNav from '@/components/BottomNav';
+
+const STREAM_CONTENT = [
+  {
+    id: 'meditation-1',
+    title: 'The 5-Min Reset',
+    category: 'meditation',
+    duration: 300,
+    description: 'Quick grounding technique',
+    content: 'Find a quiet spot. Take 5 deep breaths. Notice 5 things you can see.',
+    color: 'stream',
+  },
+  {
+    id: 'meditation-2',
+    title: 'Deep Breathing',
+    category: 'meditation',
+    duration: 180,
+    description: 'Calm your nervous system',
+    content: 'Breathe in for 4 counts, hold for 4, out for 4. Repeat 10 times.',
+    color: 'stream',
+  },
+  {
+    id: 'science-1',
+    title: 'Why Toddlers Hit',
+    category: 'science',
+    description: 'Understand the brain behind the behavior',
+    content:
+      'Hitting isn\'t meanness. It\'s impulse control developing. Their prefrontal cortex won\'t be mature until age 25.',
+    color: 'stream',
+  },
+  {
+    id: 'science-2',
+    title: 'The Power of "Yet"',
+    category: 'science',
+    description: 'Growth mindset changes brains',
+    content:
+      'Instead of "You can\'t do it," say "You can\'t do it yet." This simple word shifts their brain toward learning.',
+    color: 'stream',
+  },
 ];
 
-const SCIENCE_FACTS = [
-    { title: "Why Toddlers Hit", desc: "It's often an impulse control issue, not malice." },
-    { title: "The Power of 'Yet'", desc: "Growth mindset changes brain plasticity." },
-    { title: "Mirror Neurons", desc: "Why your calm creates their calm." }
-];
+export default function StreamPage() {
+  const { userData, markStreamContentCompleted } = useUserData();
+  const [selectedContent, setSelectedContent] = useState<string | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-export default function RestorePage() {
+  const selected = STREAM_CONTENT.find((c) => c.id === selectedContent);
+  const isCompleted = selectedContent && userData.streamContentCompleted[selectedContent];
+
+  const handlePlay = () => {
+    if (selected?.duration) {
+      setIsPlaying(true);
+      // Simulate playback completion
+      const timer = setTimeout(() => {
+        setIsPlaying(false);
+        markStreamContentCompleted(selected.id);
+      }, selected.duration * 10); // Speed up for demo
+      return () => clearTimeout(timer);
+    }
+  };
+
   return (
-    <div className="space-y-8 pb-24">
+    <div className="pb-20">
       {/* Header */}
-      <div className="bg-gradient-to-br from-teal-600 to-teal-500 text-white px-6 py-8 rounded-b-3xl shadow-sm">
-        <div className="flex items-center gap-3 mb-2">
-          <Wind size={28} />
-          <h1 className="text-2xl font-bold">Restore</h1>
-        </div>
-        <p className="text-teal-100">Rest, breathe, and recalibrate.</p>
+      <div className="bg-stream-600 text-white p-6 rounded-b-2xl">
+        <h1 className="text-2xl font-black mb-2">📻 The Stream</h1>
+        <p className="text-stream-100 text-sm">Learn & relax between challenges</p>
       </div>
 
-      <div className="p-6 space-y-8 pt-2">
-      
-      {/* Rest Channel */}
-      <section>
-        <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-bold text-gray-800 flex items-center gap-2">
-                <span className="text-xl">🧘</span> Rest & Restore
-            </h2>
-            <span className="text-xs text-primary font-medium">View All</span>
-        </div>
-        
-        <div className="flex gap-4 overflow-x-auto pb-4 -mx-6 px-6 scrollbar-hide">
-            {REST_CHANNELS.map((item, i) => (
-                <div key={i} className={`min-w-[160px] h-40 rounded-2xl p-4 flex flex-col justify-between ${item.color} shrink-0`}>
-                    <div className="flex justify-end">
-                        <PlayCircle size={32} className="opacity-50" />
+      {/* Content */}
+      <div className="p-6">
+        {!selectedContent ? (
+          <div className="space-y-4">
+            {/* Rest & Restore */}
+            <div>
+              <h2 className="font-bold text-gray-900 mb-2">🧘 Rest & Restore</h2>
+              <div className="space-y-2">
+                {STREAM_CONTENT.filter((c) => c.category === 'meditation').map((content) => (
+                  <button
+                    key={content.id}
+                    onClick={() => setSelectedContent(content.id)}
+                    className="w-full text-left p-4 bg-stream-50 border-2 border-stream-200 rounded-lg hover:bg-stream-100 transition"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="font-bold text-gray-900">{content.title}</h3>
+                        <p className="text-xs text-gray-600">{content.description}</p>
+                      </div>
+                      {userData.streamContentCompleted[content.id] && <span className="text-lg">✓</span>}
                     </div>
-                    <span className="font-bold text-lg leading-tight">{item.title}</span>
-                </div>
-            ))}
-        </div>
-      </section>
+                  </button>
+                ))}
+              </div>
+            </div>
 
-      {/* Science Channel */}
-      <section>
-        <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-bold text-gray-800 flex items-center gap-2">
-                <span className="text-xl">🧠</span> The Science
-            </h2>
-        </div>
+            {/* The Science */}
+            <div>
+              <h2 className="font-bold text-gray-900 mb-2">🧠 The Science</h2>
+              <div className="space-y-2">
+                {STREAM_CONTENT.filter((c) => c.category === 'science').map((content) => (
+                  <button
+                    key={content.id}
+                    onClick={() => setSelectedContent(content.id)}
+                    className="w-full text-left p-4 bg-stream-50 border-2 border-stream-200 rounded-lg hover:bg-stream-100 transition"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="font-bold text-gray-900">{content.title}</h3>
+                        <p className="text-xs text-gray-600">{content.description}</p>
+                      </div>
+                      {userData.streamContentCompleted[content.id] && <span className="text-lg">✓</span>}
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        ) : selected ? (
+          // Content detail view
+          <div className="space-y-4">
+            <button
+              onClick={() => setSelectedContent(null)}
+              className="text-stream-600 text-sm font-semibold hover:underline"
+            >
+              ← Back
+            </button>
 
-        <div className="space-y-3">
-            {SCIENCE_FACTS.map((item, i) => (
-                <div key={i} className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm flex gap-4 items-start">
-                    <div className="p-2 bg-blue-50 text-blue-500 rounded-lg shrink-0">
-                        <BookOpen size={20} />
-                    </div>
-                    <div>
-                        <h3 className="font-bold text-gray-900">{item.title}</h3>
-                        <p className="text-sm text-gray-500 mt-1 leading-relaxed">{item.desc}</p>
-                    </div>
+            <div className="bg-stream-50 border-2 border-stream-200 rounded-lg p-6 space-y-4">
+              <h2 className="text-xl font-black text-gray-900">{selected.title}</h2>
+              <p className="text-sm text-gray-600">{selected.description}</p>
+
+              {selected.duration && (
+                <div className="text-center">
+                  <div className="text-xs text-gray-600 mb-1">Duration</div>
+                  <div className="text-2xl font-black text-gray-900">{Math.round(selected.duration / 60)} min</div>
                 </div>
-            ))}
-        </div>
-        </section>
-        </div>
-        </div>
-        );
-        }
+              )}
+
+              <div className="bg-white p-4 rounded-lg border border-stream-200">
+                <p className="text-sm text-gray-700">{selected.content}</p>
+              </div>
+
+              {isCompleted ? (
+                <div className="py-3 text-center bg-green-100 text-green-700 rounded-lg font-semibold">
+                  ✓ Completed
+                </div>
+              ) : (
+                <button
+                  onClick={handlePlay}
+                  disabled={isPlaying}
+                  className={`w-full py-3 px-4 rounded-lg font-semibold transition ${
+                    isPlaying
+                      ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                      : 'bg-stream-600 text-white hover:bg-stream-700'
+                  }`}
+                >
+                  {isPlaying ? 'Playing...' : selected.duration ? '▶ Play' : 'Mark as Read'}
+                </button>
+              )}
+            </div>
+          </div>
+        ) : null}
+      </div>
+
+      <BottomNav />
+    </div>
+  );
+}

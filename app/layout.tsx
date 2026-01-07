@@ -1,29 +1,30 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import BottomNav from "@/components/BottomNav";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Kandu - Parenting Support",
-  description: "In the moment authoritative parenting support",
+  title: "Kandu Enhanced - Parenting Support",
+  description: "Evidence-based strategies for toddler challenges",
   manifest: "/manifest.json",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  themeColor: "#14b8a6",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-background`}>
-        <main className="max-w-md mx-auto min-h-screen bg-white relative flex flex-col">
-           <div className="flex-1">{children}</div>
-           <BottomNav />
-        </main>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="font-sans antialiased bg-white text-gray-900">
+        <div className="max-w-md mx-auto bg-white min-h-screen flex flex-col">
+          {children}
+        </div>
       </body>
     </html>
   );
