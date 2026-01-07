@@ -19,8 +19,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-background min-h-screen pb-24`}>
-        <main className="max-w-md mx-auto min-h-screen bg-white shadow-sm relative overflow-hidden">
+      <body className={`${inter.className} bg-background`}>
+        <main className="max-w-md mx-auto min-h-screen bg-white shadow-sm relative pb-28">
            {children}
            <BottomNav />
         </main>
