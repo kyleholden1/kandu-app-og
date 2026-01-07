@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Search, MessageCircle, ChevronRight } from "lucide-react";
+import Mascot from "@/components/Mascot";
 
 const COMMON_STRUGGLES = [
   { emoji: "🦷", label: "Biting" },
@@ -18,52 +19,51 @@ export default function SOSPage() {
   const [input, setInput] = useState("");
 
   return (
-    <div className="flex flex-col h-screen pb-24 bg-sos-soft/30">
-      {/* Header */}
-      <div className="p-6 pb-4">
-        <h1 className="text-2xl font-bold text-gray-900">In the Moment Support</h1>
-        <p className="text-gray-500 text-sm">Select a topic or ask Heere directly.</p>
+    <div className="flex flex-col h-screen pb-24 bg-gray-50">
+      {/* Teal Header with Mascot */}
+      <div className="bg-gradient-to-br from-primary to-primary/80 text-white px-6 py-8 rounded-b-3xl shadow-sm">
+        <div className="flex items-center gap-4 mb-6">
+          <Mascot mood="calm" />
+          <div>
+            <h1 className="text-xl font-bold">In the Moment Support</h1>
+            <p className="text-primary-foreground/80 text-sm">We've got you.</p>
+          </div>
+        </div>
       </div>
 
       {/* Quick Chips Grid */}
-      <div className="px-6 grid grid-cols-2 gap-3 mb-6">
+      <div className="px-6 grid grid-cols-4 gap-2 mb-8 mt-6">
         {COMMON_STRUGGLES.map((item) => (
           <button 
             key={item.label}
-            className="bg-white p-4 rounded-xl border border-sos/10 shadow-sm flex items-center justify-between hover:border-sos hover:shadow-md transition group"
+            className="bg-white p-3 rounded-2xl border border-gray-200 shadow-sm flex flex-col items-center justify-center gap-2 hover:border-primary hover:shadow-md transition group"
           >
-            <div className="flex items-center gap-3">
-                <span className="text-xl">{item.emoji}</span>
-                <span className="font-medium text-gray-700 group-hover:text-sos transition">{item.label}</span>
-            </div>
-            <ChevronRight size={16} className="text-gray-300 group-hover:text-sos" />
+            <span className="text-2xl">{item.emoji}</span>
+            <span className="font-medium text-gray-700 group-hover:text-primary transition text-xs text-center leading-tight">{item.label}</span>
           </button>
         ))}
       </div>
 
       {/* Chat Area (Placeholder for now) */}
-      <div className="flex-1 bg-white rounded-t-3xl shadow-lg flex flex-col overflow-hidden">
-        <div className="flex-1 p-6 flex flex-col justify-center items-center text-center text-gray-400">
-            <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-4">
-                <MessageCircle size={32} />
-            </div>
-            <p className="max-w-xs text-sm">Tap a topic above or type below for immediate, judgment-free guidance.</p>
+      <div className="flex-1 px-6 pb-6 flex flex-col justify-center items-center text-center">
+        <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mb-4">
+          <MessageCircle size={40} className="text-primary" />
         </div>
+        <h2 className="text-xl font-bold text-gray-900 mb-2">What's happening?</h2>
+        <p className="text-gray-600 text-sm max-w-xs mb-8">Select a topic above or describe what's going on. We'll give you immediate, judgment-free support.</p>
 
         {/* Input Area */}
-        <div className="p-4 border-t border-gray-100">
-            <div className="relative">
-                <input 
-                    type="text" 
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    placeholder="Type what's happening..."
-                    className="w-full bg-gray-100 border-none rounded-full py-4 pl-6 pr-12 focus:ring-2 focus:ring-sos/50 outline-none text-gray-800"
-                />
-                <button className="absolute right-2 top-2 p-2 bg-sos text-white rounded-full shadow-sm hover:opacity-90">
-                    <ChevronRight size={20} />
-                </button>
-            </div>
+        <div className="w-full relative">
+          <input 
+            type="text" 
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Type what's happening..."
+            className="w-full bg-white border-2 border-gray-200 rounded-full py-4 pl-6 pr-14 focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none text-gray-800 shadow-sm transition"
+          />
+          <button className="absolute right-2 top-1/2 -translate-y-1/2 p-3 bg-gradient-to-r from-primary to-primary/80 text-white rounded-full shadow-md hover:opacity-90 transition">
+            <ChevronRight size={20} />
+          </button>
         </div>
       </div>
     </div>

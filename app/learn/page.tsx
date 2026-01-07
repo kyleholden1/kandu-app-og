@@ -1,4 +1,4 @@
-import { BookOpen, ArrowRight } from "lucide-react";
+import { BookOpen, ArrowRight, Lightbulb } from "lucide-react";
 
 const LESSONS = [
   {
@@ -41,11 +41,17 @@ const LESSONS = [
 
 export default function LearnPage() {
   return (
-    <div className="p-6 space-y-6 pb-24">
-      <div>
-        <h1 className="text-2xl font-bold text-gray-900">Learn</h1>
-        <p className="text-sm text-gray-500 mt-1">Build your parenting foundation, lesson by lesson</p>
+    <div className="space-y-6 pb-24">
+      {/* Header */}
+      <div className="bg-gradient-to-br from-blue-600 to-blue-500 text-white px-6 py-8 rounded-b-3xl shadow-sm">
+        <div className="flex items-center gap-3 mb-2">
+          <Lightbulb size={28} />
+          <h1 className="text-2xl font-bold">Learn</h1>
+        </div>
+        <p className="text-blue-100">Build your parenting foundation, lesson by lesson</p>
       </div>
+
+      <div className="p-6 space-y-4 pt-2">
 
       {/* Lesson Grid */}
       <div className="space-y-3">
@@ -66,6 +72,7 @@ export default function LearnPage() {
             </div>
           </button>
         ))}
+      </div>
       </div>
     </div>
   );

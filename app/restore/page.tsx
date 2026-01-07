@@ -1,4 +1,4 @@
-import { PlayCircle, PauseCircle, BookOpen } from "lucide-react";
+import { PlayCircle, PauseCircle, BookOpen, Wind } from "lucide-react";
 
 const REST_CHANNELS = [
   { title: "The 5-Min Reset", color: "bg-teal-100 text-teal-800" },
@@ -15,8 +15,17 @@ const SCIENCE_FACTS = [
 
 export default function RestorePage() {
   return (
-    <div className="p-6 space-y-8 pb-24">
-      <h1 className="text-2xl font-bold text-gray-900">Restore</h1>
+    <div className="space-y-8 pb-24">
+      {/* Header */}
+      <div className="bg-gradient-to-br from-teal-600 to-teal-500 text-white px-6 py-8 rounded-b-3xl shadow-sm">
+        <div className="flex items-center gap-3 mb-2">
+          <Wind size={28} />
+          <h1 className="text-2xl font-bold">Restore</h1>
+        </div>
+        <p className="text-teal-100">Rest, breathe, and recalibrate.</p>
+      </div>
+
+      <div className="p-6 space-y-8 pt-2">
       
       {/* Rest Channel */}
       <section>
@@ -60,7 +69,8 @@ export default function RestorePage() {
                 </div>
             ))}
         </div>
-      </section>
-    </div>
-  );
-}
+        </section>
+        </div>
+        </div>
+        );
+        }
