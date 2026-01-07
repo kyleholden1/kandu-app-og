@@ -10,8 +10,8 @@ export default function BottomNav() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 flex justify-center">
-      <div className="w-full max-w-md px-6 py-4 flex justify-between items-end gap-6">
+    <nav className="border-t border-gray-200 bg-white">
+      <div className="px-6 py-4 flex justify-between items-center gap-4">
         <Link href="/sos" className={`flex flex-col items-center gap-1 flex-1 transition ${isActive('/sos') ? 'text-red-500' : 'text-gray-300'}`}>
           <div className={`p-2.5 rounded-full transition ${isActive('/sos') ? 'bg-red-50' : ''}`}>
             <Zap size={24} fill={isActive('/sos') ? "currentColor" : "none"} />

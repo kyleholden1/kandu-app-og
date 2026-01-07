@@ -20,8 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-background`}>
-        <main className="max-w-md mx-auto min-h-screen bg-white shadow-sm relative pb-28">
-           {children}
+        <main className="max-w-md mx-auto min-h-screen bg-white relative flex flex-col">
+           <div className="flex-1">{children}</div>
            <BottomNav />
         </main>
       </body>

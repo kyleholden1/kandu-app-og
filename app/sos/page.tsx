@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Search, MessageCircle, ChevronRight } from "lucide-react";
-import Mascot from "@/components/Mascot";
+import { MessageCircle, ChevronRight } from "lucide-react";
 
 const COMMON_STRUGGLES = [
   { emoji: "🦷", label: "Biting" },
@@ -19,16 +18,11 @@ export default function SOSPage() {
   const [input, setInput] = useState("");
 
   return (
-    <div className="flex flex-col h-screen pb-24 bg-gray-50">
-      {/* Teal Header with Mascot */}
-      <div className="bg-gradient-to-br from-primary to-primary/80 text-white px-6 py-8 rounded-b-3xl shadow-sm">
-        <div className="flex items-center gap-4 mb-6">
-          <Mascot mood="calm" />
-          <div>
-            <h1 className="text-xl font-bold">In the Moment Support</h1>
-            <p className="text-primary-foreground/80 text-sm">We've got you.</p>
-          </div>
-        </div>
+    <div className="flex flex-col min-h-screen bg-gray-50">
+      {/* Teal Header */}
+      <div className="bg-gradient-to-br from-pink-500 to-rose-400 text-white px-6 py-8">
+        <h1 className="text-2xl font-bold mb-1">In the Moment Support</h1>
+        <p className="text-white/90 text-sm">We've got you.</p>
       </div>
 
       {/* Quick Chips Grid */}
@@ -44,24 +38,24 @@ export default function SOSPage() {
         ))}
       </div>
 
-      {/* Chat Area (Placeholder for now) */}
-      <div className="flex-1 px-6 pb-6 flex flex-col justify-center items-center text-center">
-        <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mb-4">
-          <MessageCircle size={40} className="text-primary" />
+      {/* Chat Area */}
+      <div className="flex-1 px-6 py-12 flex flex-col justify-center items-center text-center">
+        <div className="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mb-4">
+          <MessageCircle size={32} className="text-rose-500" />
         </div>
         <h2 className="text-xl font-bold text-gray-900 mb-2">What's happening?</h2>
-        <p className="text-gray-600 text-sm max-w-xs mb-8">Select a topic above or describe what's going on. We'll give you immediate, judgment-free support.</p>
+        <p className="text-gray-600 text-sm max-w-sm mb-8">Select a topic above or describe what's going on. We'll give you immediate, judgment-free support.</p>
 
         {/* Input Area */}
-        <div className="w-full relative">
+        <div className="w-full px-2 relative">
           <input 
             type="text" 
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Type what's happening..."
-            className="w-full bg-white border-2 border-gray-200 rounded-full py-4 pl-6 pr-14 focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none text-gray-800 shadow-sm transition"
+            className="w-full bg-white border-2 border-gray-200 rounded-full py-3 pl-5 pr-12 focus:ring-2 focus:ring-rose-300 focus:border-rose-400 outline-none text-gray-800 shadow-sm transition"
           />
-          <button className="absolute right-2 top-1/2 -translate-y-1/2 p-3 bg-gradient-to-r from-primary to-primary/80 text-white rounded-full shadow-md hover:opacity-90 transition">
+          <button className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-rose-400 hover:bg-rose-500 text-white rounded-full shadow-md transition">
             <ChevronRight size={20} />
           </button>
         </div>
