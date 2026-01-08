@@ -4,13 +4,14 @@ import { useState } from 'react';
 import { GUIDES, COMMON_STRUGGLES_LIST } from '@/data/guides';
 import { useUserData } from '@/hooks/useUserData';
 import BottomNav from '@/components/BottomNav';
-import { X, ChevronRight } from 'lucide-react';
+import { X, ChevronRight, RotateCcw, ThumbsUp } from 'lucide-react';
 
 export default function SOSPage() {
   const [selectedStruggle, setSelectedStruggle] = useState<string | null>(null);
   const [selectedStrategyId, setSelectedStrategyId] = useState<string | null>(null);
   const [checkInRating, setCheckInRating] = useState(3);
   const [showCheckIn, setShowCheckIn] = useState(false);
+  const [ratingResult, setRatingResult] = useState<'success' | 'failed' | null>(null);
   const { rateStrategy, userData, recordCheckIn } = useUserData();
 
   const guide = selectedStruggle ? GUIDES[selectedStruggle] : null;
@@ -19,8 +20,11 @@ export default function SOSPage() {
   const handleRateStrategy = (rating: number) => {
     if (selectedStrategyId) {
       rateStrategy(selectedStrategyId, rating);
-      setSelectedStrategyId(null);
-      setSelectedStruggle(null);
+      if (rating === 5) {
+        setRatingResult('success');
+      } else {
+        setRatingResult('failed');
+      }
     }
   };
 
@@ -253,6 +257,102 @@ export default function SOSPage() {
           </div>
         ) : null}
       </div>
+
+      {/* Didn't Work Modal */}
+      {ratingResult === 'failed' && (
+        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-3xl p-8 max-w-sm w-full space-y-6 text-center relative">
+            <button
+              onClick={() => setRatingResult(null)}
+              className="absolute right-4 top-4 p-2 hover:bg-gray-100 rounded-full"
+            >
+              <X size={24} />
+            </button>
+
+            {/* Icon */}
+            <div className="flex justify-center">
+              <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center">
+                <RotateCcw size={40} className="text-orange-500" />
+              </div>
+            </div>
+
+            {/* Title and description */}
+            <div className="space-y-2">
+              <h3 className="text-2xl font-black text-gray-900">That's okay.</h3>
+              <p className="text-gray-600">Every situation is different. Next time, we'll suggest a different approach.</p>
+            </div>
+
+            {/* Buttons */}
+            <div className="space-y-3">
+              <button
+                onClick={() => {
+                  setRatingResult(null);
+                  setSelectedStrategyId(null);
+                  // Show next strategy or context again
+                  const nextStrategyIndex = (guide?.strategies.findIndex((s) => s.id === selectedStrategyId) ?? -1) + 1;
+                  if (guide && nextStrategyIndex < guide.strategies.length) {
+                    setSelectedStrategyId(guide.strategies[nextStrategyIndex].id);
+                  } else {
+                    setSelectedStruggle(null);
+                  }
+                }}
+                className="w-full py-3 px-4 bg-teal-600 text-white rounded-full font-semibold hover:bg-teal-700 transition"
+              >
+                See Alternative Now
+              </button>
+              <button
+                onClick={() => {
+                  setRatingResult(null);
+                  setSelectedStrategyId(null);
+                  setSelectedStruggle(null);
+                }}
+                className="w-full py-3 px-4 text-gray-400 font-semibold hover:text-gray-600 transition"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* It Worked Modal */}
+      {ratingResult === 'success' && (
+        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-3xl p-8 max-w-sm w-full space-y-6 text-center relative">
+            <button
+              onClick={() => setRatingResult(null)}
+              className="absolute right-4 top-4 p-2 hover:bg-gray-100 rounded-full"
+            >
+              <X size={24} />
+            </button>
+
+            {/* Icon */}
+            <div className="flex justify-center">
+              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+                <ThumbsUp size={40} className="text-green-500" fill="currentColor" />
+              </div>
+            </div>
+
+            {/* Title and description */}
+            <div className="space-y-2">
+              <h3 className="text-2xl font-black text-gray-900">Great job!</h3>
+              <p className="text-gray-600">We'll remember that this strategy works for {guide?.label}.</p>
+            </div>
+
+            {/* Button */}
+            <button
+              onClick={() => {
+                setRatingResult(null);
+                setSelectedStrategyId(null);
+                setSelectedStruggle(null);
+              }}
+              className="w-full py-3 px-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
 
       <BottomNav />
     </div>
