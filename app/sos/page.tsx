@@ -232,7 +232,6 @@ export default function SOSPage() {
                   <button
                     key={question}
                     onClick={() => {
-                      setSelectedContext(question);
                       // For now, just show first strategy. In production, might filter based on context
                       setSelectedStrategyId(guide.strategies[0].id);
                     }}
