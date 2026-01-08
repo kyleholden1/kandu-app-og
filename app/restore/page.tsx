@@ -43,13 +43,14 @@ const STREAM_CONTENT = [
   },
 ];
 
-export default function StreamPage() {
-  const { userData, markStreamContentCompleted } = useUserData();
+export default function RestorePage() {
+  const { userData, markStreamContentCompleted, recordPracticeCompleted, isPracticeCompletedToday } = useUserData();
   const [selectedContent, setSelectedContent] = useState<string | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const selected = STREAM_CONTENT.find((c) => c.id === selectedContent);
   const isCompleted = selectedContent && userData.streamContentCompleted[selectedContent];
+  const practiceCompleted = isPracticeCompletedToday('daily-practice');
 
   const handlePlay = () => {
     if (selected?.duration) {
@@ -63,18 +64,38 @@ export default function StreamPage() {
     }
   };
 
+  const handlePracticeStart = () => {
+    recordPracticeCompleted('daily-practice');
+  };
+
   return (
     <div className="pb-20">
       {/* Header */}
       <div className="bg-stream-600 text-white p-6 rounded-b-2xl">
-        <h1 className="text-2xl font-black mb-2">📻 The Stream</h1>
-        <p className="text-stream-100 text-sm">Learn & relax between challenges</p>
+        <h1 className="text-2xl font-black mb-2">🌬️ Restore</h1>
+        <p className="text-stream-100 text-sm">Rest, reset, and recover</p>
       </div>
 
       {/* Content */}
       <div className="p-6">
         {!selectedContent ? (
           <div className="space-y-4">
+            {/* Daily Practice */}
+            <div className="space-y-2">
+              <h2 className="font-bold text-gray-900">Daily Practice</h2>
+              <p className="text-sm text-gray-600">Today's focus: Grounding technique for calm mornings</p>
+              <button
+                onClick={handlePracticeStart}
+                disabled={practiceCompleted}
+                className={`w-full py-3 px-4 rounded-lg font-semibold transition ${
+                  practiceCompleted
+                    ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                    : 'bg-stream-600 text-white hover:bg-stream-700'
+                }`}
+              >
+                {practiceCompleted ? '✓ Completed Today' : 'Start Practice'}
+              </button>
+            </div>
             {/* Rest & Restore */}
             <div>
               <h2 className="font-bold text-gray-900 mb-2">🧘 Rest & Restore</h2>

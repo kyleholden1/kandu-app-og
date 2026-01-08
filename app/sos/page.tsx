@@ -8,7 +8,9 @@ import BottomNav from '@/components/BottomNav';
 export default function SOSPage() {
   const [selectedStruggle, setSelectedStruggle] = useState<string | null>(null);
   const [selectedStrategyId, setSelectedStrategyId] = useState<string | null>(null);
-  const { rateStrategy } = useUserData();
+  const [checkInRating, setCheckInRating] = useState(3);
+  const [showCheckIn, setShowCheckIn] = useState(false);
+  const { rateStrategy, userData, recordCheckIn } = useUserData();
 
   const guide = selectedStruggle ? GUIDES[selectedStruggle] : null;
   const selectedStrategy = guide?.strategies.find((s) => s.id === selectedStrategyId);
@@ -19,6 +21,11 @@ export default function SOSPage() {
       setSelectedStrategyId(null);
       setSelectedStruggle(null);
     }
+  };
+
+  const handleCheckInSubmit = () => {
+    recordCheckIn(checkInRating);
+    setShowCheckIn(false);
   };
 
   return (
@@ -32,8 +39,63 @@ export default function SOSPage() {
       {/* Content */}
       <div className="p-6">
         {!selectedStruggle ? (
-          // List of struggles
-          <div className="grid grid-cols-2 gap-3">
+          // Home view: Streak, Check-in, and Struggles
+          <div className="space-y-6">
+            {/* Current Streak */}
+            <div className="bg-sos-50 border-2 border-sos-200 rounded-xl p-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <div className="text-sm text-gray-600">Current Streak</div>
+                  <div className="text-3xl font-black text-sos-600">{userData.streak}</div>
+                  <div className="text-xs text-gray-500 mt-1">days in a row</div>
+                </div>
+                <div className="text-4xl">🔥</div>
+              </div>
+            </div>
+
+            {/* Check-in */}
+            <div className="space-y-2">
+              <h2 className="font-bold text-gray-900">How's It Going?</h2>
+              <p className="text-sm text-gray-600">Rate your regulation level</p>
+
+              {!showCheckIn ? (
+                <button
+                  onClick={() => setShowCheckIn(true)}
+                  className="w-full py-3 px-4 bg-sos-100 border-2 border-sos-300 rounded-lg font-semibold text-sos-700 hover:bg-sos-200 transition"
+                >
+                  Start Check-in
+                </button>
+              ) : (
+                <div className="space-y-3 bg-sos-50 p-4 rounded-lg">
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span>😤 Struggling</span>
+                      <span>😌 Thriving</span>
+                    </div>
+                    <input
+                      type="range"
+                      min="1"
+                      max="5"
+                      value={checkInRating}
+                      onChange={(e) => setCheckInRating(Number(e.target.value))}
+                      className="w-full"
+                    />
+                    <div className="text-center text-2xl">{['😤', '😐', '😊', '😄', '😌'][checkInRating - 1]}</div>
+                  </div>
+                  <button
+                    onClick={handleCheckInSubmit}
+                    className="w-full py-2 bg-sos-600 text-white rounded-lg font-semibold hover:bg-sos-700 transition"
+                  >
+                    Submit Check-in
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* Struggles */}
+            <div>
+              <h3 className="font-bold text-gray-900 mb-3">What's happening?</h3>
+              <div className="grid grid-cols-2 gap-3">
             {COMMON_STRUGGLES_LIST.map(({ emoji, label }) => (
               <button
                 key={label}
@@ -44,8 +106,10 @@ export default function SOSPage() {
                 <span className="text-sm font-semibold text-gray-900">{label}</span>
               </button>
             ))}
-          </div>
-        ) : guide ? (
+             </div>
+            </div>
+            </div>
+            ) : guide ? (
           // Strategies for selected struggle
           <div className="space-y-4">
             <button
