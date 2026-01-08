@@ -4,9 +4,11 @@ import { useState } from 'react';
 import { GUIDES, COMMON_STRUGGLES_LIST } from '@/data/guides';
 import { useUserData } from '@/hooks/useUserData';
 import BottomNav from '@/components/BottomNav';
+import { X, ChevronRight } from 'lucide-react';
 
 export default function SOSPage() {
   const [selectedStruggle, setSelectedStruggle] = useState<string | null>(null);
+  const [selectedContext, setSelectedContext] = useState<string | null>(null);
   const [selectedStrategyId, setSelectedStrategyId] = useState<string | null>(null);
   const [checkInRating, setCheckInRating] = useState(3);
   const [showCheckIn, setShowCheckIn] = useState(false);
@@ -20,6 +22,7 @@ export default function SOSPage() {
       rateStrategy(selectedStrategyId, rating);
       setSelectedStrategyId(null);
       setSelectedStruggle(null);
+      setSelectedContext(null);
     }
   };
 
@@ -28,18 +31,32 @@ export default function SOSPage() {
     setShowCheckIn(false);
   };
 
+  const contextQuestions: Record<string, string[]> = {
+    Hitting: ['Getting their attention', 'Excited/overstimulated', 'Tired or frustrated', 'Testing boundaries'],
+    Tantrums: ['Tired', 'Hungry', 'Overstimulated', 'Wants something specific'],
+    Biting: ['Teething', 'Overstimulated', 'Tired', 'Wants attention'],
+    Sharing: ["Won't share their toys", 'Wants what someone else has', 'Playing together', 'Sibling conflict'],
+    Eating: ['Refusing to eat', 'Being picky', 'Eating too fast', 'Throwing food'],
+    Sleep: ['Won\'t go to bed', 'Waking up at night', 'Early morning wake', 'Fighting naps'],
+    Travel: ['Car rides', 'Flying', 'Restaurant/public', 'New places'],
+    'Bath Time': ['Scared of water', 'Won\'t get in', 'Won\'t get out', 'Sensitive to temperature'],
+  };
+
   return (
     <div className="pb-20">
       {/* Header */}
-      <div className="bg-sos-600 text-white p-6 rounded-b-2xl">
-        <h1 className="text-2xl font-black mb-2">🆘 SOS Mode</h1>
-        <p className="text-sos-100 text-sm">Immediate support when challenges happen</p>
+      <div className="bg-sos-600 text-white p-6 rounded-b-3xl">
+        <div className="flex items-center gap-2 mb-2">
+          <span className="text-2xl">🆘</span>
+          <h1 className="text-2xl font-black">SOS Mode</h1>
+        </div>
+        <p className="text-sos-100 text-sm">Performing Zone Support</p>
       </div>
 
       {/* Content */}
       <div className="p-6">
         {!selectedStruggle ? (
-          // Home view: Streak, Check-in, and Struggles
+          // HOME VIEW
           <div className="space-y-6">
             {/* Current Streak */}
             <div className="bg-sos-50 border-2 border-sos-200 rounded-xl p-4">
@@ -92,98 +109,153 @@ export default function SOSPage() {
               )}
             </div>
 
-            {/* Struggles */}
+            {/* Quick Guides */}
             <div>
-              <h3 className="font-bold text-gray-900 mb-3">What's happening?</h3>
+              <h3 className="font-bold text-gray-900 mb-3 uppercase text-xs tracking-wider">Quick Guides</h3>
               <div className="grid grid-cols-2 gap-3">
-            {COMMON_STRUGGLES_LIST.map(({ emoji, label }) => (
-              <button
-                key={label}
-                onClick={() => setSelectedStruggle(label)}
-                className="flex flex-col items-center gap-2 p-4 bg-gray-50 hover:bg-sos-50 border-2 border-gray-200 hover:border-sos-300 rounded-lg transition"
-              >
-                <span className="text-3xl">{emoji}</span>
-                <span className="text-sm font-semibold text-gray-900">{label}</span>
+                {COMMON_STRUGGLES_LIST.map(({ emoji, label }) => (
+                  <button
+                    key={label}
+                    onClick={() => setSelectedStruggle(label)}
+                    className="flex items-center justify-between gap-3 p-4 bg-white border-2 border-gray-200 rounded-full hover:border-sos-300 hover:bg-sos-50 transition"
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="text-2xl">{emoji}</span>
+                      <span className="font-semibold text-gray-900">{label}</span>
+                    </div>
+                    <ChevronRight size={18} className="text-gray-400" />
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Ask Heere */}
+            <div>
+              <h3 className="font-bold text-gray-900 mb-3 uppercase text-xs tracking-wider">Ask Heere</h3>
+              <button className="w-full flex items-center justify-between gap-3 p-4 bg-white border-2 border-gray-200 rounded-2xl hover:border-sos-300 hover:bg-sos-50 transition">
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">🦜</span>
+                  <div className="text-left">
+                    <h4 className="font-semibold text-gray-900">Community Insights</h4>
+                    <p className="text-xs text-gray-600">See what's working for others</p>
+                  </div>
+                </div>
+                <ChevronRight size={18} className="text-gray-400" />
               </button>
-            ))}
-             </div>
             </div>
-            </div>
-            ) : guide ? (
-          // Strategies for selected struggle
+          </div>
+        ) : selectedStrategyId && selectedStrategy ? (
+          // STRATEGY VIEW
           <div className="space-y-4">
             <button
-              onClick={() => setSelectedStruggle(null)}
+              onClick={() => {
+                setSelectedStrategyId(null);
+                setSelectedContext(null);
+              }}
               className="text-sos-600 text-sm font-semibold hover:underline"
             >
               ← Back
             </button>
 
-            <h2 className="text-xl font-black text-gray-900">{guide.emoji} {guide.label}</h2>
+            <div className="bg-white rounded-3xl p-6 space-y-4">
+              {/* Yellow warning box */}
+              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
+                <p className="text-sm text-yellow-800">
+                  <span className="font-semibold">Before you respond:</span> Take a deep breath. Regulate yourself first. Your calm is contagious.
+                </p>
+              </div>
 
-            {!selectedStrategyId ? (
+              {/* Strategy header */}
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-2xl">{guide?.emoji}</span>
+                  <h2 className="text-xl font-black text-gray-900">{selectedStrategy.name}</h2>
+                </div>
+                <p className="text-sm text-teal-600 font-semibold">✨ Trying: {selectedStrategy.name}</p>
+              </div>
+
+              {/* Steps */}
               <div className="space-y-3">
-                {guide.strategies.map((strategy) => (
+                {selectedStrategy.steps.map((step, i) => (
+                  <div key={i} className="flex gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-bold text-teal-600">{i + 1}</span>
+                    </div>
+                    <p className="text-sm text-gray-700 pt-1">{step}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Why */}
+              <div className="italic text-sm text-gray-600 bg-gray-50 p-3 rounded">
+                "{selectedStrategy.why}"
+              </div>
+
+              {/* Buttons */}
+              <div className="space-y-3 pt-2">
+                <div className="grid grid-cols-2 gap-3">
                   <button
-                    key={strategy.id}
-                    onClick={() => setSelectedStrategyId(strategy.id)}
-                    className="w-full p-4 text-left bg-sos-50 border-2 border-sos-200 rounded-lg hover:bg-sos-100 transition"
+                    onClick={() => handleRateStrategy(1)}
+                    className="py-3 px-4 border-2 border-gray-300 rounded-full font-semibold text-gray-700 hover:bg-gray-50 transition"
                   >
-                    <h3 className="font-bold text-gray-900 mb-1">{strategy.name}</h3>
-                    <p className="text-sm text-gray-600">{strategy.why}</p>
+                    Didn't Work
+                  </button>
+                  <button
+                    onClick={() => handleRateStrategy(5)}
+                    className="py-3 px-4 bg-teal-600 text-white rounded-full font-semibold hover:bg-teal-700 transition"
+                  >
+                    It Worked!
+                  </button>
+                </div>
+                <button className="w-full py-3 px-4 border-2 border-blue-300 text-blue-600 rounded-full font-semibold hover:bg-blue-50 transition">
+                  📧 Email Me These Steps
+                </button>
+              </div>
+            </div>
+          </div>
+        ) : selectedStruggle && guide ? (
+          // CONTEXT MODAL
+          <div className="fixed inset-0 bg-black/40 flex items-end z-50">
+            <div className="bg-white rounded-t-3xl w-full max-h-[90vh] overflow-y-auto p-6 space-y-4">
+              <button
+                onClick={() => setSelectedStruggle(null)}
+                className="absolute right-4 top-4 p-2 hover:bg-gray-100 rounded-full"
+              >
+                <X size={24} />
+              </button>
+
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-2xl">{guide.emoji}</span>
+                <h2 className="text-2xl font-black text-gray-900">Tell me more</h2>
+              </div>
+
+              <p className="text-gray-700 font-semibold">What's the {guide.label.toLowerCase()} situation?</p>
+
+              <div className="space-y-3">
+                {contextQuestions[guide.label]?.map((question) => (
+                  <button
+                    key={question}
+                    onClick={() => {
+                      setSelectedContext(question);
+                      // For now, just show first strategy. In production, might filter based on context
+                      setSelectedStrategyId(guide.strategies[0].id);
+                    }}
+                    className="w-full py-4 px-4 border-2 border-gray-200 rounded-xl text-gray-700 hover:border-sos-300 hover:bg-sos-50 transition font-medium"
+                  >
+                    {question}
                   </button>
                 ))}
               </div>
-            ) : selectedStrategy ? (
-              // Strategy details
-              <div className="space-y-4 bg-sos-50 p-4 rounded-lg border-2 border-sos-200">
-                <h3 className="text-lg font-bold text-gray-900">{selectedStrategy.name}</h3>
 
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Steps:</h4>
-                  <ol className="space-y-2">
-                    {selectedStrategy.steps.map((step, i) => (
-                      <li key={i} className="flex gap-3 text-sm text-gray-700">
-                        <span className="font-bold text-sos-600">{i + 1}</span>
-                        <span>{step}</span>
-                      </li>
-                    ))}
-                  </ol>
-                </div>
-
-                <div className="bg-white p-3 rounded-lg border border-sos-200">
-                  <p className="text-sm text-gray-700">
-                    <span className="font-semibold">Why: </span>
-                    {selectedStrategy.why}
-                  </p>
-                </div>
-
-                <div className="space-y-2">
-                  <p className="text-sm font-semibold text-gray-900">Did this work?</p>
-                  <div className="flex gap-2">
-                    <button
-                      onClick={() => handleRateStrategy(5)}
-                      className="flex-1 py-2 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600 transition"
-                    >
-                      ✓ It Worked!
-                    </button>
-                    <button
-                      onClick={() => handleRateStrategy(1)}
-                      className="flex-1 py-2 bg-red-500 text-white rounded-lg font-semibold hover:bg-red-600 transition"
-                    >
-                      ✗ Didn't Work
-                    </button>
-                  </div>
-                </div>
-
-                <button
-                  onClick={() => setSelectedStrategyId(null)}
-                  className="w-full py-2 bg-gray-200 text-gray-900 rounded-lg font-semibold hover:bg-gray-300 transition"
-                >
-                  Try Another
-                </button>
-              </div>
-            ) : null}
+              <button
+                onClick={() => {
+                  setSelectedStrategyId(guide.strategies[0].id);
+                }}
+                className="w-full py-4 px-4 bg-gray-300 text-gray-500 rounded-xl font-semibold cursor-not-allowed"
+              >
+                Get Support
+              </button>
+            </div>
           </div>
         ) : null}
       </div>
