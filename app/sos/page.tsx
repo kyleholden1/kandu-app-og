@@ -8,7 +8,6 @@ import { X, ChevronRight } from 'lucide-react';
 
 export default function SOSPage() {
   const [selectedStruggle, setSelectedStruggle] = useState<string | null>(null);
-  const [selectedContext, setSelectedContext] = useState<string | null>(null);
   const [selectedStrategyId, setSelectedStrategyId] = useState<string | null>(null);
   const [checkInRating, setCheckInRating] = useState(3);
   const [showCheckIn, setShowCheckIn] = useState(false);
@@ -148,10 +147,7 @@ export default function SOSPage() {
           // STRATEGY VIEW
           <div className="space-y-4">
             <button
-              onClick={() => {
-                setSelectedStrategyId(null);
-                setSelectedContext(null);
-              }}
+              onClick={() => setSelectedStrategyId(null)}
               className="text-sos-600 text-sm font-semibold hover:underline"
             >
               ← Back
