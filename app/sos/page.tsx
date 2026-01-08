@@ -143,16 +143,16 @@ export default function SOSPage() {
             </div>
           </div>
         ) : selectedStrategyId && selectedStrategy ? (
-          // STRATEGY VIEW
-          <div className="space-y-4">
-            <button
-              onClick={() => setSelectedStrategyId(null)}
-              className="text-sos-600 text-sm font-semibold hover:underline"
-            >
-              ← Back
-            </button>
+          // STRATEGY VIEW - AS MODAL OVERLAY
+          <div className="fixed inset-0 bg-black/40 flex items-end z-50">
+            <div className="bg-white rounded-t-3xl w-full max-h-[90vh] overflow-y-auto p-6 space-y-4">
+              <button
+                onClick={() => setSelectedStrategyId(null)}
+                className="absolute right-4 top-4 p-2 hover:bg-gray-100 rounded-full"
+              >
+                <X size={24} />
+              </button>
 
-            <div className="bg-white rounded-3xl p-6 space-y-4">
               {/* Yellow warning box */}
               <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
                 <p className="text-sm text-yellow-800">
