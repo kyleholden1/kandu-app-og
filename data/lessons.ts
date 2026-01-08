@@ -6,6 +6,7 @@ export interface Lesson {
   category: 'regulation' | 'boundaries' | 'play' | 'gifts' | 'mindset';
   readTime: number;
   icon: string;
+  inspiredBy: string;
 }
 
 export const LESSONS: Lesson[] = [
@@ -29,6 +30,7 @@ This means the response "You know better than that" misses the point entirely. T
     category: 'regulation',
     readTime: 4,
     icon: '🧠',
+    inspiredBy: 'Seed & Sew',
   },
   {
     id: 'talking-meltdown',
@@ -52,6 +54,7 @@ During a meltdown, *less is more*. Save the labeling and empathizing for after t
     category: 'regulation',
     readTime: 5,
     icon: '🤐',
+    inspiredBy: 'Seed & Sew',
   },
   {
     id: 'no-creates-resistance',
@@ -67,6 +70,7 @@ Telling them what they *can* do gives them a clear path forward.
     category: 'boundaries',
     readTime: 3,
     icon: '✅',
+    inspiredBy: 'Tiny Humans, Big Emotions by Alyssa Blask Campbell',
   },
   {
     id: 'find-yes',
@@ -82,6 +86,7 @@ When you can find a "yes" buried inside the "no," you stop fighting the impulse 
     category: 'boundaries',
     readTime: 3,
     icon: '🧗',
+    inspiredBy: 'Tiny Humans, Big Emotions by Alyssa Blask Campbell',
   },
   {
     id: 'what-vs-how',
@@ -104,6 +109,7 @@ Notice the structure: the non-negotiable is stated clearly, then the choice is o
     category: 'boundaries',
     readTime: 5,
     icon: '🎯',
+    inspiredBy: 'Tiny Humans, Big Emotions by Alyssa Blask Campbell',
   },
   {
     id: 'independent-play',
@@ -119,6 +125,7 @@ Think of yourself as an extra supporting the lead actor. This helps them build s
     category: 'play',
     readTime: 3,
     icon: '👀',
+    inspiredBy: 'Dr. Aliza Pressman',
   },
   {
     id: 'play-pockets',
@@ -134,6 +141,7 @@ The idea is to remove barriers. If toys are locked away or hard to reach, indepe
     category: 'play',
     readTime: 4,
     icon: '🏠',
+    inspiredBy: 'Dr. Aliza Pressman',
   },
   {
     id: 'schedule-downtime',
@@ -149,6 +157,7 @@ Schedule downtime with the same fierceness you would any enrichment activity. Pr
     category: 'play',
     readTime: 3,
     icon: '⏰',
+    inspiredBy: 'Dr. Aliza Pressman',
   },
   {
     id: 'materialism-research',
@@ -172,6 +181,7 @@ One study found that material overindulgence from mothers was actually linked to
     category: 'gifts',
     readTime: 5,
     icon: '🎁',
+    inspiredBy: 'Dr. Cara Goodwin',
   },
 ];
 

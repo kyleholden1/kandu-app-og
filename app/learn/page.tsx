@@ -33,8 +33,8 @@ export default function LearnPage() {
                         <button
                             onClick={() => setSelectedCategory(null)}
                             className={`px-4 py-2 rounded-full text-sm font-semibold transition ${selectedCategory === null
-                                    ? 'bg-blue-600 text-white'
-                                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                                ? 'bg-blue-600 text-white'
+                                : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                                 }`}
                         >
                             All ({LESSONS.length})
@@ -46,8 +46,8 @@ export default function LearnPage() {
                                     key={key}
                                     onClick={() => setSelectedCategory(key)}
                                     className={`px-4 py-2 rounded-full text-sm font-semibold transition ${selectedCategory === key
-                                            ? 'bg-blue-600 text-white'
-                                            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                                        ? 'bg-blue-600 text-white'
+                                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                                         }`}
                                 >
                                     {label} ({count})
@@ -71,8 +71,8 @@ export default function LearnPage() {
                             >
                                 <div
                                     className={`border-2 rounded-2xl p-4 space-y-2 ${isExpanded
-                                            ? `${category.color} ${category.borderColor} border-2`
-                                            : 'bg-white border-gray-200 hover:border-gray-300'
+                                        ? `${category.color} ${category.borderColor} border-2`
+                                        : 'bg-white border-gray-200 hover:border-gray-300'
                                         }`}
                                 >
                                     {/* Header */}
