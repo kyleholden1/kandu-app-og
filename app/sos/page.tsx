@@ -21,7 +21,6 @@ export default function SOSPage() {
       rateStrategy(selectedStrategyId, rating);
       setSelectedStrategyId(null);
       setSelectedStruggle(null);
-      setSelectedContext(null);
     }
   };
 
