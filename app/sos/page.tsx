@@ -36,14 +36,15 @@ export default function SOSPage() {
     };
 
     const contextQuestions: Record<string, string[]> = {
-        Hitting: ['Getting their attention', 'Excited/overstimulated', 'Tired or frustrated', 'Testing boundaries'],
-        Tantrums: ['Tired', 'Hungry', 'Overstimulated', 'Wants something specific'],
-        Biting: ['Teething', 'Overstimulated', 'Tired', 'Wants attention'],
-        Sharing: ["Won't share their toys", 'Wants what someone else has', 'Playing together', 'Sibling conflict'],
-        Eating: ['Refusing to eat', 'Being picky', 'Eating too fast', 'Throwing food'],
-        Sleep: ['Won\'t go to bed', 'Waking up at night', 'Early morning wake', 'Fighting naps'],
-        Travel: ['Car rides', 'Flying', 'Restaurant/public', 'New places'],
-        'Bath Time': ['Scared of water', 'Won\'t get in', 'Won\'t get out', 'Sensitive to temperature'],
+        Hitting: ['Getting their attention', 'Excited/overstimulated', 'Tired or frustrated', 'Testing boundaries', 'I\'m not sure'],
+        Tantrums: ['Tired', 'Hungry', 'Overstimulated', 'Wants something specific', 'I\'m not sure'],
+        Biting: ['Teething', 'Overstimulated', 'Tired', 'Wants attention', 'I\'m not sure'],
+        Sharing: ["Won't share their toys", 'Wants what someone else has', 'Playing together', 'Sibling conflict', 'I\'m not sure'],
+        Eating: ['Refusing to eat', 'Being picky', 'Eating too fast', 'Throwing food', 'I\'m not sure'],
+        Sleep: ['Won\'t go to bed', 'Waking up at night', 'Early morning wake', 'Fighting naps', 'I\'m not sure'],
+        Travel: ['Car rides', 'Flying', 'Restaurant/public', 'New places', 'I\'m not sure'],
+        'Bath Time': ['Scared of water', 'Won\'t get in', 'Won\'t get out', 'Sensitive to temperature', 'I\'m not sure'],
+        'Repeating Questions': ['Seeking reassurance about something', 'Processing anxiety or worry', 'Testing boundaries or seeking attention', 'Self-soothing through repetition', 'I\'m not sure'],
     };
 
     return (

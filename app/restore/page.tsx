@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useUserData } from '@/hooks/useUserData';
 import BottomNav from '@/components/BottomNav';
+import { AlertCircle } from 'lucide-react';
 
 const STREAM_CONTENT = [
   {
@@ -69,7 +70,33 @@ export default function RestorePage() {
   };
 
   return (
-    <div className="pb-20">
+    <div className="pb-20 relative">
+      {/* Under Construction Overlay */}
+      <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
+        <div className="bg-white rounded-3xl p-8 max-w-sm w-full space-y-6 text-center shadow-lg">
+          {/* Icon */}
+          <div className="flex justify-center">
+            <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center">
+              <AlertCircle size={40} className="text-amber-600" />
+            </div>
+          </div>
+
+          {/* Title and description */}
+          <div className="space-y-2">
+            <h2 className="text-2xl font-black text-gray-900">Coming Soon</h2>
+            <p className="text-gray-600">The Restore section is under construction. We're building something great for you.</p>
+          </div>
+
+          {/* Button */}
+          <button
+            onClick={() => window.history.back()}
+            className="w-full py-3 px-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition"
+          >
+            Go Back
+          </button>
+        </div>
+      </div>
+
       {/* Header */}
       <div className="bg-stream-600 text-white p-6 rounded-b-2xl">
         <h1 className="text-2xl font-black mb-2">🌬️ Restore</h1>
@@ -77,7 +104,7 @@ export default function RestorePage() {
       </div>
 
       {/* Content */}
-      <div className="p-6">
+      <div className="p-6 pointer-events-none opacity-50">
         {!selectedContent ? (
           <div className="space-y-4">
             {/* Daily Practice */}
