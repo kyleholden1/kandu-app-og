@@ -10,20 +10,66 @@ export interface Lesson {
 
 export const LESSONS: Lesson[] = [
   {
-    id: 'knows-better',
-    title: 'Why Your Child "Knows Better" But Still Does It',
-    excerpt: 'There\'s a difference between knowing a skill and having the capacity to use it. When kids are dysregulated, access to what they\'ve learned goes offline—it\'s not defiance, it\'s a maxed-out brain.',
-    content: `Your child can probably recite the rule back to you. They *know* not to hit, they *know* to use gentle hands. So why do they keep doing the thing?
+    id: 'my-kid-keeps-melting-down',
+    title: 'Why My Kid Keeps Melting Down',
+    excerpt: 'Meltdowns aren\'t defiance—they\'re your child\'s nervous system saying "I\'m maxed out." Understanding what\'s happening in their brain changes how you respond.',
+    content: `When your child melts down over something tiny—a broken cracker, a transition, a "no"—it feels like an overreaction. But here's what's actually happening: their nervous system is telling you they're dysregulated.
 
-Here's the key distinction: there's a difference between ability and capacity. Your child likely knows the rule or skill you've talked about before. But knowing something and having the capacity to use it in the moment are two entirely different things.
+**What happens in a meltdown:**
 
-When kids are tired, hungry, overstimulated, or emotionally flooded, access to what they've learned goes offline. Knowing and doing—and having the capacity to do it—have little correlation when a child is dysregulated. It's not defiance. It's not manipulation. It's a brain that's maxed out.
+When children are emotionally flooded, their executive function shuts down. The part of their brain responsible for reasoning, flexibility, and impulse control goes offline. They're not being manipulative or defiant—they're genuinely stuck.
 
-Think about yourself: you know you shouldn't snap at your partner when you're stressed, but sometimes you do anyway. Same mechanism. The skill exists, but the capacity to access it doesn't.
+During a meltdown, talking doesn't help. In fact, it usually makes things worse. When you label feelings or try to reason ("I know you're upset"), you're asking their brain to do cognitive work it can't do right now. You're also adding to sensory overload.
 
-This means the response "You know better than that" misses the point entirely. They probably do know better—they just couldn't access it in that moment.
+**What actually helps:**
 
-**How to help:** Always assume skill, not will. Instead of assuming they're choosing to misbehave, assume the skill is there but capacity isn't. Say something like "Looks like this is still hard when you're excited—let me help." Practice the skill during calm moments, when they actually have the capacity to learn. And connect before you correct: "I know you're excited to tell me. Try again after I finish this thought."
+**Model regulation first.** Before you can support them, you need to be calm. If you're frustrated or angry, they'll sense it. Your regulated nervous system is contagious.
+
+**Use your body, not your words.** At meltdown stage, your calm presence matters more than explanations. Sit nearby, keep your posture gentle, and let them see that you're not scared of their big feelings.
+
+**Follow the "one-up" rule.** Use one more word than your child's current capacity. If they're down to one-word responses, try two: "All done?" or "Need help?" Match their ability, don't exceed it.
+
+**Don't tell them how to feel.** Saying "don't be sad" or "you're overreacting" invalidates what's real for them. They hear: "Your feeling is wrong."
+
+**After they calm down, reflect together.** Once their brain is back online, you can gently explore: "That was a big feeling. What do you think happened?" No lecture needed—just curiosity.
+
+**Why meltdowns at the end of the day happen:**
+
+By the time your child gets home, they've been regulating all day—sitting still, following rules, navigating social dynamics. Every act of self-control depletes their tank. The meltdown over the broken cracker isn't about the cracker. It's about an empty tank.
+
+After school, expect less. Build in decompression time before asking anything of them.
+
+**Try this:** Next time a meltdown starts, resist the urge to fix or explain. Instead, focus on your body language: sit nearby, breathe slowly, and wait. Let your calm presence do the work. After they settle, ask with curiosity: "What happened there?"`,
+    category: 'regulation',
+    readTime: 5,
+    inspiredBy: 'Seed & Sew',
+  },
+  {
+    id: 'my-kid-knows-the-rule',
+    title: 'My Kid Knows the Rule But Still Breaks It',
+    excerpt: 'There\'s a difference between knowing a skill and having the capacity to use it. They probably do know better—they just couldn\'t access it in that moment.',
+    content: `Your child can recite the rule back to you. They know they\'re not supposed to hit, they know about gentle hands. So why do they keep doing the thing?
+
+The key distinction: knowing and capacity are two different things.
+
+Your child likely *knows* the skill. But when they\'re tired, hungry, overstimulated, or emotionally flooded, access to what they\'ve learned goes offline. It\'s not defiance. It\'s not manipulation. It\'s a brain that\'s maxed out.
+
+Think about yourself: you know you shouldn\'t snap at your partner when you\'re stressed, but sometimes you do anyway. Same mechanism. The skill exists, but the capacity to access it doesn\'t.
+
+**How to respond:**
+
+Instead of assuming they\'re choosing to misbehave, assume the skill is there but capacity isn\'t. This changes everything about how you approach the situation.
+
+**Do this:**
+- "Looks like this is still hard when you\'re excited—let me help."
+- "Your body is having big feelings. Let\'s take a break."
+- Practice the skill during calm moments when they actually have capacity to learn.
+- Connect before you correct: "I know you\'re excited to tell me. Try again after I finish this thought."
+
+**Don\'t do this:**
+- "You know better than that" (they do, but they couldn\'t access it)
+- Expect behavior change when they\'re dysregulated
+- Practice skills during moments of stress
 
 **Try this:** Next time they break a rule they clearly know, pause before reacting. Ask yourself: is this a skill problem or a capacity problem? Respond to whichever it actually is.`,
     category: 'regulation',
@@ -31,879 +77,1205 @@ This means the response "You know better than that" misses the point entirely. T
     inspiredBy: 'Seed & Sew',
   },
   {
-    id: 'talking-meltdown',
-    title: 'Why Talking During a Meltdown Backfires',
-    excerpt: 'Your words during a dysregulated moment may actually make their feelings bigger, not smaller. Labeling during dysregulation can actually make feelings bigger.',
-    content: `Your instinct might be to explain, label feelings, or reason with your child mid-tantrum. But here's the science: it usually makes things worse. In fact, labeling and empathizing during a dysregulated moment may actually make their feelings *bigger*, not smaller.
+    id: 'my-kid-needs-space-to-regulate',
+    title: 'My Kid Wants Space When They\'re Upset',
+    excerpt: 'Every nervous system is different. For some kids, connection regulates them. For others, being talked to feels overwhelming. When your child seeks space, giving it is supportive.',
+    content: `You reach out to comfort your child and they pull away. You try to help them through their feelings and they get more upset. It feels like rejection, but it's actually information about what their nervous system needs.
 
-Here's what's happening in their brain:
+Every child regulates differently. For some, connection and presence are regulating. For others, being talked to or supported right away feels overwhelming and makes it harder to settle.
 
-First, when children are upset, executive function is impaired. The part of the brain responsible for remembering and applying ideas is essentially behind a closed door. Your words aren't getting through the way you think they are.
+**When a child needs space:**
 
-Second, talking requires effort to process and respond. When you ask questions or offer reflections, you're asking their brain to do work—and that pulls energy away from the process of cooling down.
+Giving it is supportive—not abandonment. The key is to honor the space while making sure they know you\'re nearby and available.
 
-Third, if they can't express what they're feeling and sense that you want them to, they may feel patronized or pressured. Not understanding how to express their feelings, combined with feeling like they should be able to, can increase frustration rather than relieve it.
+**What to say:**
 
-Fourth, at meltdown stage, it's not about using the right words—it's all just noise. You're adding to the sensory overload, not cutting through it.
+"I hear that you want space. I love you. I'll be in the kitchen if you need me."
 
-During a meltdown, *less is more*. Save the labeling and empathizing for after their brain comes back online and they're actually able to learn.
+"It makes sense to feel frustrated. You can take your time. I'll be in the living room if you want help."
 
-**Try this:** During the next meltdown, try sitting nearby with calm body language and say almost nothing. A simple "I'm here" or just your quiet presence. See what happens when you stop trying to talk them through it.`,
+"I\'m going to give you some quiet time. I\'m right here if anything changes."
+
+You\'re respecting their need while signaling: You\'re not alone. I haven\'t gone anywhere. I\'m available when you\'re ready.
+
+**The balance:**
+
+Some kids need space to regulate AND need to know you\'re available. Don\'t disappear entirely, but do give them the room they\'re asking for. Sit in the next room. Make yourself visible but not hovering.
+
+Over time, you\'ll learn your child\'s regulation style. Some prefer to process alone. Others need you nearby but quiet. Both are valid.
+
+**Try this:** Next time your child pulls away when upset, resist the urge to pursue. Instead, name it: "I can see you need some space. I\'m here when you\'re ready." Then actually give them space—stay nearby but don\'t hover.`,
     category: 'regulation',
     readTime: 3,
     inspiredBy: 'Seed & Sew',
   },
   {
-    id: 'no-creates-resistance',
-    title: 'Why "No" Creates More Resistance',
-    excerpt: 'When you say "don\'t throw," a child\'s brain has to imagine throwing, then delete that image, then figure out what to do instead. Telling them what they CAN do gives them a clear path forward.',
-    content: `When a child is throwing toys during cleanup, the instinct is to say "No throwing toys!" But here's the problem: their brain now has a vivid image of exactly what you don't want.
+    id: 'how-to-set-boundaries-without-threats',
+    title: 'How to Set Boundaries Without Threats',
+    excerpt: 'There\'s a difference between a threat ("You\'ll get in big trouble") and a boundary ("I won\'t let you hit. I will hold your hands if you do."). Boundaries are clear, calm, and followable.',
+    content: `"If you throw that toy, you\'re going to be in big trouble." That\'s a threat—vague, reactive, and puts you in the position of enforcing something undefined.
 
-Young children process positives more easily than negatives. "Don't throw" requires them to: hear the instruction, imagine throwing, then mentally delete that image and figure out what to do instead. That's a lot of steps for a developing brain.
+A boundary sounds different: "I won\'t let you hit me. I will hold your hands if you hit me. If you want my attention, you can say \'play!\'"
 
-Telling them what they *can* do gives them a clear path forward.
+**The difference:**
 
-**Try this:** Swap "no throwing toys" for "You can place the toys on this shelf or in this basket." Watch how differently they respond when they have a clear "yes."`,
-    category: 'communication',
-    readTime: 2,
-    inspiredBy: 'Tiny Humans, Big Emotions by Alyssa Blask Campbell',
-  },
-  {
-    id: 'find-yes',
-    title: 'Find the Yes Inside the No',
-    excerpt: 'The impulse to climb isn\'t bad—it\'s developmentally appropriate. The problem isn\'t the climbing, it\'s the location. When you find a "yes" buried inside the "no," you stop fighting the impulse and redirect it.',
-    content: `Your toddler is climbing on the kitchen table. Again. You say "no climbing on the table" for the fortieth time and nothing changes.
+A threat says: "Something bad *might* happen if you get me mad enough."
+A boundary says: "This *will* happen, calmly and consistently."
 
-Here's a reframe: the impulse to climb isn't bad—it's developmentally appropriate. They're not trying to break rules; they're trying to use their body. The problem isn't the climbing, it's the location.
+Threats rely on fear. Boundaries rely on clarity.
 
-When you can find a "yes" buried inside the "no," you stop fighting the impulse and redirect it instead.
+**What makes a good boundary:**
 
-**Try this:** Next time they're climbing somewhere off-limits, try "You want to climb! You can climb on the couch or on your Pikler." You've honored the need while holding the boundary.`,
-    category: 'communication',
-    readTime: 2,
-    inspiredBy: 'Tiny Humans, Big Emotions by Alyssa Blask Campbell',
-  },
-  {
-    id: 'what-vs-how',
-    title: 'The What vs. The How',
-    excerpt: 'Boundaries distinguish the what from the how. The parent decides the what (non-negotiable), and the child chooses the how (agency within the limit). This reduces power struggles while maintaining firm boundaries.',
-    content: `Power struggles often happen when kids feel like they have zero control. But here's a framework that helps: boundaries distinguish the *what* from the *how*. The parent decides the what, and the child chooses the how.
-
-The non-negotiable (getting dressed, leaving for school, brushing teeth) stays firm—that's the "what" and it's not up for debate. But within that boundary, you offer them agency over how it happens. This gives them a sense of control without undermining the limit.
-
-This isn't permissive parenting—the boundary absolutely holds. You're not asking *if* they want to get dressed. You're giving them dignity and autonomy within the limit you've set.
+1. **It\'s clear.** Your child knows exactly what will happen and why.
+2. **It\'s calm.** You state it matter-of-factly, not with anger or raised voice.
+3. **It\'s followable.** The consequence matches the behavior and makes sense to a young brain.
+4. **You can follow through.** Don\'t set a boundary you can\'t maintain.
 
 **Examples:**
-- What: "We are going to school so we need to get ready." How: "Will you be putting on your shoes, or will I?"
-- What: "We have five more minutes of this game, then we're done." How: "When we're done, I can carry you or you can walk."
-- What: "I'm going to start a timer. When it's empty, I will help you put your clothes on if you don't finish."
 
-Notice the structure: the non-negotiable is stated clearly, then the choice is offered within it. The child has agency, but the outcome is certain.
+Instead of: "If you don\'t stop that, you\'re in trouble!"
+Say: "I won\'t let you throw things. If you need to get energy out, we can jump or run outside."
 
-**Try this:** Next time you're heading into a potential power struggle, identify the "what" (the non-negotiable) and offer a "how" (a choice within it). See how differently they respond when they have some control.`,
+Instead of: "Don\'t you dare hit your sister!"
+Say: "I won\'t let you hit. I will hold your hands if you\'re about to hit. If you\'re angry, you can hit the pillow instead."
+
+Instead of: "You\'ll regret not listening!"
+Say: "When we leave in 5 minutes, we\'re going. You can walk to the car or I\'ll carry you, but we\'re leaving at that time."
+
+**Why boundaries work better:**
+
+When kids know what will happen (and you follow through), they learn cause and effect. They understand the world as predictable and safe, even when limits are firm.
+
+Threats create anxiety and compliance through fear. Boundaries create safety and understanding through clarity.
+
+**Try this:** Think of a behavior that triggers you. Instead of threatening a consequence, write down a boundary: "I will...", "I won\'t let...", "When you..., then..." Make it clear, calm, and something you can actually maintain.`,
+    category: 'boundaries',
+    readTime: 4,
+    inspiredBy: 'Tiny Humans, Big Emotions by Alyssa Blask Campbell',
+  },
+  {
+    id: 'my-kid-keeps-climbing-testing-limits',
+    title: 'My Kid Is Always Climbing/Testing Limits',
+    excerpt: 'The impulse to climb isn\'t bad—it\'s developmentally appropriate. When you redirect impulses instead of blocking them, you honor the need while holding the boundary.',
+    content: `Your toddler is climbing on the kitchen table. Again. You say "no climbing" for the fortieth time and nothing changes.
+
+Here\'s a reframe: the impulse to climb isn\'t bad—it\'s developmentally appropriate. They\'re not trying to break rules; they\'re trying to use their body. The problem isn\'t the climbing. It\'s the location.
+
+**The What vs. The How:**
+
+Boundaries work better when you distinguish between what\'s non-negotiable (the "what") and what has flexibility (the "how").
+
+**The What** = Non-negotiable. You decide this. It\'s not up for debate.
+**The How** = Your child chooses this. Within the boundary, they have agency.
+
+**Examples:**
+
+What: "We are going to school so we need to get ready."
+How: "Will you put on your shoes, or will I?"
+
+What: "We have five more minutes of this game, then we\'re done."
+How: "When we\'re done, should I carry you or will you walk?"
+
+What: "You want to climb! That\'s good—your body needs movement."
+How: "You can climb on the couch, or on your Pikler, or we can go to the playground."
+
+**Why this works:**
+
+You\'re not fighting the impulse. You\'re redirecting it. Your child gets to use their body (meets their need) AND you maintain safety (holds the boundary). They feel respected because they had a choice.
+
+**When there\'s resistance:**
+
+If they\'re upset about not climbing on the table, acknowledge it: "I know you want to climb the table. It\'s not safe for climbing. You CAN climb on the couch." Then let them feel disappointed. You\'re allowed to hold a boundary while they don\'t like it.
+
+**Try this:** Next time they\'re testing a limit, pause and find the "yes" inside the "no." What need are they trying to meet? Can you redirect it instead of blocking it? "You want to climb! You can climb on..."`,
+    category: 'boundaries',
+    readTime: 4,
+    inspiredBy: 'Tiny Humans, Big Emotions by Alyssa Blask Campbell',
+  },
+  {
+    id: 'saying-no-keeps-backfiring',
+    title: 'Saying "No" Keeps Backfiring',
+    excerpt: 'When you say "don\'t throw," their brain imagines throwing, then tries to delete that image. Telling them what they CAN do gives them a clear path forward.',
+    content: `When a child is throwing toys during cleanup, the instinct is to say "No throwing toys!" But here\'s the problem: their brain now has a vivid image of exactly what you don\'t want.
+
+Young children process positives more easily than negatives. "Don\'t throw" requires them to:
+1. Hear the instruction
+2. Imagine throwing
+3. Mentally delete that image
+4. Figure out what to do instead
+
+That\'s a lot of steps for a developing brain.
+
+**What works instead:**
+
+Tell them what they *can* do. Give them a clear, positive path forward.
+
+Instead of: "Stop throwing the toys!"
+Say: "You can place the toys on this shelf or in this basket."
+
+Instead of: "Don\'t run in the house!"
+Say: "Inside we walk. Outside we can run."
+
+Instead of: "Don\'t interrupt me!"
+Say: "I\'m finishing this conversation. You can wait here or draw while you wait."
+
+**Why this works:**
+
+You\'re not making them imagine the behavior you don\'t want. You\'re giving them a clear picture of what you DO want. Their brain can follow that.
+
+**The research:**
+
+Studies show that when you frame things positively, kids respond more quickly and with less resistance. It\'s not about being permissive—the boundary is just as firm. It\'s about communicating it in a way their brain can actually process.
+
+**Try this:** Next time you\'re about to say "Don\'t," pause. Rephrase it as what they CAN do instead. Watch how differently they respond.`,
     category: 'boundaries',
     readTime: 3,
     inspiredBy: 'Tiny Humans, Big Emotions by Alyssa Blask Campbell',
   },
   {
-    id: 'boundaries-stated-not-threatened',
-    title: 'Why Boundaries Need to Be Stated, Not Threatened',
-    excerpt: '"If you throw that toy, you\'re going to be in big trouble" is a threat—vague and reactive. A boundary tells them what WILL happen, not what might happen if you get mad enough.',
-    content: `There's a difference between a threat and a boundary. "If you throw that toy, you're going to be in big trouble" is a threat. It's vague, reactive, and puts you in the position of enforcing something undefined.
+    id: 'when-i-have-to-override-their-no',
+    title: 'When I Have to Override Their "No"',
+    excerpt: 'Sometimes safety requires breaking their physical boundary. The key is offering choice first, narrating what\'s happening, and soothing after.',
+    content: `You\'ve been teaching your child that their body is theirs, that "no" matters, that consent is real. And then you have to pin them down for a diaper change or hold them for a shot. It feels like a contradiction.
 
-A boundary sounds different: "I won't let you hit me. I will hold your hands if you hit me. If you want me to notice you, you can say 'play!'"
+Here\'s the truth: sometimes you have to break their physical boundary to keep them safe. That\'s part of the job. But even in these moments, you can show respect.
 
-The boundary tells them what *will* happen, not what might happen if you get mad enough. It's clear, calm, and followable.
+**For safety situations** (running into traffic, touching something dangerous):
+Act immediately. Grab them, remove them from danger. You can explain afterward: "I grabbed you because you were running toward the road. That scared me. I need to keep you safe."
 
-**Try this:** Next time you're about to threaten a consequence, pause and reframe it as a boundary. State what you will do, offer an alternative way to meet their need, and follow through.`,
-    category: 'boundaries',
-    readTime: 2,
-    inspiredBy: 'Tiny Humans, Big Emotions by Alyssa Blask Campbell',
-  },
-  {
-    id: 'override-their-no',
-    title: 'When You Have to Override Their "No"',
-    excerpt: 'Sometimes you have to break their physical boundary to keep them safe. The key is to offer choice before you override, narrate what\'s happening, and soothe after.',
-    content: `You've been teaching your child that their body is theirs, that "no" matters, that consent is real. And then you have to pin them down for a diaper change or hold them for a shot at the doctor. It feels like a contradiction.
+**For necessary but non-emergency situations** (doctor visits, diaper changes):
+Offer choice *before* you override.
 
-Here's the truth: sometimes you have to break their physical boundary to keep them safe or healthy. That's part of the job. It may not feel good, and they may be confused in the moment, but safety is paramount. In those moments, you need to act first and soothe after.
+"We need to get our vaccine shots. I know you\'re scared and this doesn\'t feel good. Would you like mommy or daddy to hold you while it happens?"
 
-This applies to situations like grabbing a child by the arm when they're running into the road, holding them still for a medical procedure, or insisting on a diaper change when they're resistant. These are non-negotiables.
+Give them the choice twice. If they can\'t choose, narrate what you\'re doing: "I\'m going to pick you up now and bring you to the bathroom."
 
-But even in these moments, you can still show respect. The key is to offer choice *before* you override, and narrate what's happening when you can't wait for agreement.
+Then soothe after: "That was hard. I know you didn\'t like that. Your body is safe now."
 
-**For safety situations** (running into traffic, touching something dangerous): Act immediately. You can explain and soothe afterward—"I grabbed you because you were running toward the road. That scared me. I need to keep you safe."
+**Why this matters:**
 
-**For necessary but non-emergency situations** (doctor's visits, diaper changes): Offer the choice twice before deciding for them. "We need to get our vaccine shots. I know you're scared and this doesn't feel good, but would you like mommy or daddy to hold you while it happens?" Give them the choice twice, then if they can't choose, narrate what you're doing: "I'm going to pick you up now and bring you to the bathroom."
+Teaching "no" is protective. But kids also need to understand that safety comes first, and sometimes adults make decisions for them. You\'re not contradicting the "no" message—you\'re showing that respect and safety can coexist.
 
-**Try this:** For the next necessary-but-resistant moment, try offering the choice twice before acting. Then narrate calmly as you do what needs to happen. Soothe afterward. They may still be upset, but you've maintained respect within the non-negotiable.`,
+When you offer choice first and narrate what\'s happening, you maintain dignity within the non-negotiable.
+
+**Try this:** For the next necessary-but-resistant moment, offer choice twice before acting. Then narrate calmly as you do what needs to happen. Soothe afterward. They may still be upset, but you\'ve maintained respect.`,
     category: 'boundaries',
     readTime: 3,
     inspiredBy: 'Tiny Humans, Big Emotions by Alyssa Blask Campbell',
   },
   {
     id: 'why-their-no-is-good',
-    title: 'Why Their "No" Is Actually Good',
-    excerpt: '"No" is a skill you want them to have. When you honor their "no" outside of safety situations, you teach them their voice matters and boundaries are real—this is deeply protective as they grow.',
-    content: `Your child refuses a hug from grandma. They won't say hi to your friend. They say "no" to the outfit you picked out.
+    title: 'Why "No" Is Actually a Good Skill',
+    excerpt: '"No" is a skill you want them to have. When you honor their "no" outside of safety situations, you teach them that their voice matters and boundaries are real.',
+    content: `Your child refuses a hug from grandma. They won\'t say hi to your friend. They say "no" to the outfit you picked out.
 
-It's tempting to override these moments to keep the peace or teach politeness. But here's the thing: "no" is a skill you *want* them to have. Outside of safety situations, honoring their "no" is one of the most important things you can do.
+It\'s tempting to override these moments. But here\'s the thing: "no" is a skill you *want* them to have.
 
-When they say no and you respect it, you're teaching them that their voice matters, that they have agency over their body, and that boundaries are real. "No" is good—it gives them power over their own body. This is deeply protective as they grow.
+**Why "no" matters:**
 
-This also means we, as parents, need to model what respecting "no" looks like. If you see your child shake their head when you go to grab them or tickle them—stop. If they pull away from a hug, let them. If they say they don't want to be picked up, don't pick them up (unless safety requires it).
+When they say no and you respect it, you\'re teaching them that:
+- Their voice matters
+- They have agency over their body
+- Boundaries are real
+- They can trust their own judgment
 
-You can also amplify their voice when they can't speak for themselves. If your child is uncomfortable with a stranger or new adult, be on the kid's side. "She takes time to warm up to new faces—I'll say hi for her." You've protected them and modeled graceful boundary-setting.
+This is deeply protective as they grow.
 
-And when they say "no" to something like clothes? You can honor the "no" while maintaining the boundary: "Okay, well it's cold so you need to pick something that covers your legs and arms. I will open the drawer for you."
+**Modeling respect for "no":**
 
-**Try this:** Notice this week when your child says "no" to something that isn't a safety issue. Practice honoring it—or at minimum, acknowledging it and offering an alternative. Watch what it does for their sense of agency.`,
+Watch your own actions. When your child shakes their head about being grabbed or tickled—stop. If they pull away from a hug, let them. If they say they don\'t want to be picked up, don\'t pick them up (unless safety requires it).
+
+You\'re showing them what it looks like when someone respects their "no."
+
+**Amplifying their voice:**
+
+When your child is uncomfortable with a stranger or new adult, be on their side. Don\'t force interaction.
+
+Instead of: "Give grandma a hug!"
+Say: "She takes time to warm up to new faces. I\'ll say hi for her."
+
+You\'ve protected them AND modeled graceful boundary-setting.
+
+**Honoring "no" while maintaining limits:**
+
+You can respect their "no" about some things while maintaining non-negotiable boundaries about others.
+
+Child: "I don\'t want to get dressed!"
+You: "I hear you. Getting dressed is something we have to do. You can pick between the blue shirt or the red shirt."
+
+You\'re honoring their desire for autonomy while maintaining the non-negotiable.
+
+**Try this:** Notice this week when your child says "no" to something that isn\'t a safety issue. Practice honoring it. Watch what it does for their sense of agency and confidence.`,
+    category: 'boundaries',
+    readTime: 4,
+    inspiredBy: 'Tiny Humans, Big Emotions by Alyssa Blask Campbell',
+  },
+  {
+    id: 'natural-consequences-teach-best',
+    title: 'Natural Consequences Teach Better Than Punishment',
+    excerpt: 'Little kids learn through cause and effect, not lectures. When they feel the outcome of a choice (safely), the learning sticks—creating stronger neural pathways than words alone.',
+    content: `The true meaning of "discipline" is to teach. And sometimes, letting your kid learn "the hard way" (when it\'s safe) is the most valuable lesson—because it aligns with how their brain actually learns.
+
+**How kids learn:**
+
+Little kids learn through cause and effect, not through lectures or punishment. When they do X and experience Y, their brain wires: "Oh. This is how the world works."
+
+Research shows that experiential learning creates stronger neural pathways than verbal instruction alone. When kids feel the outcome of a choice (safely), the learning sticks.
+
+**Why natural consequences work:**
+
+1. **They engage the thinking brain.** Punishment works through fear ("Don\'t do this or else"). Natural consequences work through understanding ("Oh. This is how it works"). When a child isn\'t scared of you, their brain stays regulated enough to learn.
+
+2. **The lesson is proportional and logical.** The consequence matches the behavior, happens right after the action, and makes sense to a young brain.
+
+3. **They\'re memorable.** Your child remembers because they *experienced* it, not because you told them about it.
+
+**What natural consequences are NOT:**
+
+- Letting kids get hurt
+- Ignoring safety
+- Being passive or uninvolved
+- "Teaching them a lesson" with shame
+
+They only work when things are safe. We\'d never let a kid experience a natural consequence involving danger—running into the street, touching a hot stove, seriously hurting another child.
+
+**Examples by age:**
+
+*Toddlers/Preschoolers:*
+- Refuses a coat → Feels cold for a few minutes before offering it again
+- Throws food → Loses it (calmly, without drama)
+- Won\'t get in the car seat → You help them in, matter-of-factly
+
+*Elementary:*
+- Forgets homework → Explains it to the teacher
+- Unkind to a friend → That friend doesn\'t want to keep playing
+- Breaks a toy → Loses it for a while
+
+*Preteens/Teens:*
+- Forgot to charge device → No device when they want it
+- Didn\'t study → The grade reflects it
+- Lost their phone → They replace it or wait
+
+**Your role:**
+
+Don\'t shame or lecture. Be present and curious: "What do you think happened there?" "What would you do differently?"
+
+You\'re not punishing the mistake—you\'re being the safe person while they learn from it.
+
+**Try this:** Next time your child is heading toward a safe but unpleasant consequence, resist the urge to rescue. Let the experience happen, then be the safe place while they make sense of it.`,
+    category: 'boundaries',
+    readTime: 5,
+    inspiredBy: 'Big Little Feelings',
+  },
+  {
+    id: 'holding-boundaries-and-honoring-feelings',
+    title: 'Holding Boundaries AND Honoring Feelings',
+    excerpt: 'One of the most important skills is holding space for big emotions while maintaining boundaries. Feeling angry is allowed. Unsafe behavior is not.',
+    content: `One of the biggest misunderstandings about emotion-coaching parenting is this: allowing kids to feel their feelings means allowing any behavior that comes with them.
+
+That\'s not what it means.
+
+**The key is both/and:**
+
+Feeling angry, frustrated, or overwhelmed? Always allowed.
+Unsafe or disrespectful behavior? Not allowed.
+
+You can hold both boundaries at the same time.
+
+**What this sounds like:**
+
+"I can hear how upset you are. I won\'t let this turn into yelling or hurtful words. Let\'s take a break and come back when we can talk it through."
+
+"I won\'t let you slam the door. I\'ll hold it shut if it feels too hard for your body to stop right now."
+
+"If speaking kindly feels hard, I\'ll help you take some space to calm down."
+
+"You\'re allowed to be furious. I won\'t let you throw things. Let\'s find another way for your body to get that out."
+
+**Why this works:**
+
+You\'re validating the emotion while anchoring safety. Your child learns that:
+- Big feelings are normal
+- Safety is non-negotiable
+- Their parent can handle their emotions
+- There are better ways to express what they\'re feeling
+
+**The deeper work:**
+
+If you didn\'t grow up with adults who could hold both—who let you feel AND maintained safety—this work often starts inward. Learning to let yourself feel without judgment makes it easier to offer the same to your child.
+
+**Try this:** Next time your child is expressing big feelings in an unsafe or disrespectful way, validate the feeling AND hold the boundary: "You\'re allowed to be furious. I won\'t let you hit. Let\'s do something else with that energy."`,
     category: 'boundaries',
     readTime: 3,
-    inspiredBy: 'Tiny Humans, Big Emotions by Alyssa Blask Campbell',
-  },
-  {
-    id: 'perfectionism',
-    title: 'What Perfectionism Is Really About',
-    excerpt: 'Beneath perfectionism is usually fear—of failure, disappointment, or losing approval. Dismissing their feelings ("I like your drawing!") doesn\'t help. Acknowledge what they were going for without trying to fix it.',
-    content: `When your child melts down because their tower fell or their drawing isn't "right," it might look like overreaction. But beneath perfectionism is usually fear—fear of failure, fear of disappointment, or fear of losing your approval.
-
-It doesn't help for you to dismiss their feeling by saying things like "I like your drawing, it's great!" After they get used to that response, they may crumple it up anyway—they know it's not what they wanted, and now they feel unseen on top of feeling disappointed.
-
-**When their brain is back online and they're calm, try:**
-
-**1. Acknowledge the feeling.** "It's hard when things don't look how you expected." You're not fixing it or minimizing it—you're naming what's true.
-
-**2. Model imperfection.** Show them what it looks like to mess up and keep going. "I messed up. I'm going to try again." Let them see that mistakes don't end the world or break connection.
-
-**3. Bring them back to safety.** "You wanted it to be perfect, and it's hard when it's not. Come back when your body feels calmer." You're validating the desire while not reinforcing that perfection is actually required.
-
-The goal isn't to talk them out of caring about quality. It's to help them see that imperfection is survivable, that mistakes are part of the process, and that their worth isn't tied to the outcome.
-
-**Try this:** Next time they're upset about something not turning out right, resist the urge to fix or reassure. Instead try: "It's hard when things don't look how you expected. You wanted it to be different." Let the disappointment exist. Then later, model your own imperfection openly.`,
-    category: 'mindset',
-    readTime: 3,
     inspiredBy: 'Seed & Sew',
   },
   {
-    id: 'modeling-mistakes',
-    title: 'Why Modeling Mistakes Matters More Than Avoiding Them',
-    excerpt: 'The goal isn\'t perfection—it\'s showing your child that mistakes don\'t break connection. When you model making a mistake and repairing it, you teach them that messing up is survivable.',
-    content: `You're going to mess up. You'll snap, lose patience, say the wrong thing. The goal isn't perfection—it's showing your child that mistakes don't break connection.
+    id: 'my-kid-says-im-bored',
+    title: 'My Kid Keeps Saying "I\'m Bored"',
+    excerpt: 'Boredom means there\'s space—and that\'s where creativity and problem-solving grow. Before you fix it, check basic needs. Then help them get comfortable with boredom.',
+    content: `When your child announces they\'re bored, your first instinct might be to jump in with suggestions or feel guilty. But here\'s a reframe: "I\'m bored" is often a sign you\'re doing something right.
 
-When you model making a mistake and then repairing it, you teach them something crucial: messing up is survivable, and relationships can come back from rupture.
+Boredom means there\'s space. Your child isn\'t over-scheduled to the point of never having a moment to fill themselves. That space is where creativity, independence, and problem-solving grow.
 
-This is more valuable than getting it right every time.
+**First: Check the basics**
 
-**Try this:** After you've lost your cool, come back and name it: "I messed up earlier when I yelled. I was frustrated, but that wasn't okay. I'm going to try again." Let them see the full cycle—mistake, acknowledgment, repair.`,
-    category: 'mindset',
-    readTime: 2,
-    inspiredBy: 'Seed & Sew',
-  },
-  {
-    id: 'preparing-big-changes',
-    title: 'Preparing Kids for Big Changes',
-    excerpt: 'Big events are easier when kids know what\'s coming. Preparation isn\'t a one-time conversation—it\'s repetition over days or weeks, visual aids, and showing respect by narrating what you\'re doing.',
-    content: `A new sibling, a doctor's appointment, starting school, a move—big events are easier when kids know what's coming. Their brains do better with predictability, and preparation reduces the anxiety of the unknown.
+Before you do anything else, pause and run through this mental checklist:
+- Are they hungry?
+- Are they overtired?
+- Have you had genuine connection today?
 
-**Ways to prepare kids for big events or changes:**
+Sometimes "I\'m bored" is just the surface. Underneath might be a need that\'s easier to meet than you think. A snack, quiet time, or 10 minutes of your focused attention might be all they need.
 
-**Let them know what's coming—early.** Start talking about it days or even weeks before. Continue to bring it up regularly because repetition helps them adjust. Don't expect one conversation to be enough. Being scared is okay—they can work through that over time with your support.
+**Second: Validate the feeling**
 
-**Use visual aids.** If they have a dentist appointment coming up and it's their first time going, make or find pictures of all the main parts: the waiting room, sitting in the chair, the tools, what the dentist might do. Making the unknown familiar reduces fear significantly.
+If basic needs are met and they\'re still bored, your job isn\'t to hand them a list of activities. It\'s to help them get comfortable with boredom.
 
-**Tell them what you're doing when you move them.** We move children around a lot without their consent—picking them up, putting them in car seats, bringing them to the bath. The least we can do is show respect by telling them where they're going. "I'm going to pick you up now and bring you to the bathroom."
+Try saying: "Boredom is actually a good thing. Your body is telling you it\'s ready for something new. What do you think you might want to do?"
 
-**Amplify their voice if you notice discomfort.** If you see them shake their head when someone approaches, or pull away from touch, stop. Give them a voice when they're uncomfortable with strangers or new situations—always be on the kid's side. "She takes time to warm up to new faces. I'll say hi for her."
+Your calm is contagious. If you can be relaxed about their boredom, it helps them settle too.
 
-Preparation isn't about eliminating fear—it's about making the unknown manageable and showing your child that you'll help them through it.
+**Third: Guide their thinking, don\'t solve it**
 
-**Try this:** For an upcoming new experience, start talking about it days ahead. Describe what they'll see, who they'll meet, what will happen. Let them ask questions, express fear, and revisit it multiple times before the day arrives.`,
-    category: 'transitions',
-    readTime: 3,
-    inspiredBy: 'Tiny Humans, Big Emotions by Alyssa Blask Campbell',
-  },
-  {
-    id: 'dysregulated-help',
-    title: 'What to Do When They\'re Dysregulated',
-    excerpt: 'When your child is falling apart, demands make it worse. Offer regulation first, break tasks into the smallest possible pieces, and co-regulate by being calm yourself.',
-    content: `When your child is falling apart—whining, melting down, refusing everything—demands make it worse. Their system is overloaded, and asking them to do things right now is like asking someone to run a marathon when they've already collapsed.
+Instead of offering a list of activities, guide them toward their own ideas.
 
-Here's the sequence that actually helps:
+Ask connecting questions based on something they recently loved:
+- "I remember you were building that castle yesterday. Want to go back to it?"
+- "You were telling me about that show. Want to play something like that?"
+- "What were you working on before we had to stop?"
 
-**1. Offer regulation before demands.** Before you can expect them to listen, cooperate, or problem-solve, they need help getting regulated. That might look like offering a snack, a hug, time alone, or physical movement to get the energy out. Meet the nervous system need first.
+Let the idea feel like it came from them. You\'re keeping the ball in their court.
 
-**2. Break things into the smallest possible pieces.** Once they're more settled, don't give big instructions. Break the task down into the smallest step they can actually do. Not "clean up your room" but "grab that dirty shirt and put it in the hamper." Then another small step. Then another.
+**Why this matters:**
 
-**3. Co-regulate.** Sit with them, be calm yourself, and say something simple like "I'm here. Let's tackle it together." Your calm presence helps their nervous system settle. You're not doing it for them—you're helping them find the capacity to do it.
+When you constantly fill their boredom with your suggestions, they miss the chance to learn self-direction, problem-solving, and creativity. Boredom is actually where those skills develop.
 
-Remember: kids can know a skill (naming feelings, taking deep breaths, problem-solving) and still not have the capacity to use it when they're dysregulated. The day stacks against them—listening to directions, sitting still, following rules, navigating social life. By the time they're falling apart, they're depleted.
-
-**Try this:** Next time they're dysregulated and you need them to do something, pause the demand entirely. Offer regulation first: "Let's take a break. Do you need a hug or some space?" Then come back to the task in the smallest possible steps.`,
-    category: 'regulation',
-    readTime: 3,
-    inspiredBy: 'Seed & Sew',
-  },
-  {
-    id: 'end-of-day-meltdown',
-    title: 'Why the Meltdown Happens at the End of the Day',
-    excerpt: 'Your child held it together all day, then loses it over something tiny. This isn\'t bad behavior—the day has been stacking against them. By the time they\'re home with you, there\'s nothing left.',
-    content: `Your child held it together all day at school—following rules, sitting still, navigating social dynamics, listening to teachers. Then they walk in the door and lose it over something tiny.
-
-This isn't bad behavior. The day has been stacking against them. Every act of self-regulation depletes the tank a little more. By the time they're home with you (their safe person), there's nothing left.
-
-The meltdown isn't about the broken cracker. It's about the empty tank.
-
-**Try this:** After school or daycare, expect less. Build in decompression time before asking anything of them. A snack, quiet play, or just flopping on the couch might be what they need before they can engage again.`,
-    category: 'regulation',
-    readTime: 2,
-    inspiredBy: 'Seed & Sew',
-  },
-  {
-    id: 'connect-before-correct',
-    title: 'Connect Before You Correct',
-    excerpt: 'Correction lands better after connection. "I know you\'re excited to tell me—try again after I finish this thought" works better than "Don\'t interrupt me!" Acknowledgment first makes them more able to hear you.',
-    content: `When your child does something wrong, the instinct is to address the behavior immediately. But correction lands better after connection.
-
-"I know you're excited to tell me—try again after I finish this thought" works better than "Don't interrupt me!" The first one acknowledges their experience before redirecting. The second one just shuts them down.
-
-Connection doesn't mean you skip the correction. It means you make sure they feel seen first, which makes them more able to hear you.
-
-**Try this:** Next time you need to correct behavior, lead with acknowledgment. "You really wanted that toy and it's hard to wait" before "We don't grab things from other people's hands."`,
-    category: 'communication',
-    readTime: 2,
-    inspiredBy: 'Seed & Sew',
-  },
-  {
-    id: 'during-meltdown',
-    title: 'What to Do During a Meltdown',
-    excerpt: 'When your child is mid-tantrum, your words matter less than your presence. Model regulation, use non-verbal support, follow the "one-up" rule for words, and don\'t tell them how to feel.',
-    content: `When your child is mid-tantrum, your words matter less than your presence. Here's what actually helps:
-
-**Model regulation.** It's okay to feel frustrated too, but do what you need to stay calm—even if that means stepping away for a moment. Children can sense when you're masking your own dysregulation with pretend calm. They will sense it if you're faking it, so do what you actually need to regulate yourself first. Walking away for a minute is better than staying and seething.
-
-**Use non-verbal support.** Gentle facial expressions, calm posture, sitting close, or a calming touch if they want it. At meltdown stage, your body language communicates more than your words ever could. Encourage children to do the same—practice simple signs like "help" or "more" or "hug" when they're upset, since these require less processing than full sentences.
-
-**Follow the "one-up" rule.** Use one more word than your child's current capacity. If they're down to one-word responses, try two words: "All done?" or "Need help?" If they're not speaking at all, one word or just presence might be right. Match their capacity, don't exceed it.
-
-**Don't tell them how to feel.** Saying "don't be sad" or "you're fine" invalidates what's real for them. You might mean it as comfort, but it lands as dismissal—and often makes things worse because now they feel unseen on top of whatever else they're feeling.
-
-**Try this:** During the next meltdown, focus on your body language more than your words. Sit nearby, stay genuinely calm (or get there first), and wait. Let your presence do the work instead of your explanations.`,
-    category: 'regulation',
-    readTime: 3,
-    inspiredBy: 'Seed & Sew',
-  },
-  {
-    id: 'amplify-their-voice',
-    title: 'Amplify Their Voice When They Can\'t',
-    excerpt: 'When your child is uncomfortable with a stranger or new situation, be their voice without overriding their feelings. This teaches them you\'re on their side and models graceful boundary-setting.',
-    content: `Your child meets someone new and won't say hi. They shake their head when a relative goes in for a hug. They freeze when asked a question by an adult.
-
-In these moments, you can be their voice without overriding their feelings. This teaches them that you're on their side and that their discomfort is valid.
-
-It also models how to hold a boundary kindly—a skill they'll need as they grow.
-
-**Try this:** When your child is uncomfortable with a stranger or new person, speak for them: "She takes time to warm up to new faces—I'll say hi for her." You've protected them and shown them what advocating for yourself looks like.`,
-    category: 'boundaries',
-    readTime: 2,
-    inspiredBy: 'Tiny Humans, Big Emotions by Alyssa Blask Campbell',
-  },
-  {
-    id: 'sibling-conflict',
-    title: 'Sibling Conflict—Be a Guide, Not a Referee',
-    excerpt: 'Stepping in as referee usually backfires. Instead, start with regulation (not resolution), name the need underneath the behavior, and invite collaboration. The goal isn\'t forced apologies—it\'s building skills.',
-    content: `When your kids are fighting, the instinct is to figure out who started it and make them apologize. But stepping in as referee usually backfires—someone feels blamed, nobody learns anything, and you're exhausted.
-
-Try being a guide instead. Your job isn't to resolve it *for* them, it's to help them work through it *together*.
-
-Start with regulation, not resolution. Everyone's escalated—solving the problem comes after the nervous systems settle. Then name the need underneath the behavior: "Looks like you both want to play with this." This helps kids connect their actions to feelings, which builds emotional literacy.
-
-Finally, invite collaboration: "We're all on the same team. How can we make this work for both of you?" If they're stuck, offer to provide an idea—but let them try first.
-
-The goal isn't forced apologies or forced sharing. It's building their awareness and empowerment to participate in collaboration and connection.
-
-**Try this:** Next sibling conflict, skip "who started it." Instead: "Let's pause and take a breath before solving this." Then ask what each child wanted and invite them to brainstorm together.`,
-    category: 'siblings',
-    readTime: 3,
-    inspiredBy: 'Seed & Sew',
-  },
-  {
-    id: 'hidden-message-be-careful',
-    title: 'The Hidden Message Inside "Be Careful"',
-    excerpt: 'When you say "Go ahead!" but add "Be careful!" with a nervous tone, children hear the underlying emotion louder than the words. They sense your hesitation and may interpret it as doubt in their abilities.',
-    content: `You're watching your child climb a low wall. You want to encourage them, so you say "Go ahead!"—but then add "Be careful!" with a nervous tone.
-
-Here's what they might hear: "This is dangerous. I'm not sure you can do this."
-
-Children pick up on more than words. They sense your hesitation, your body language, your tone. When we pair encouragement with worry, we send two messages at once—and the underlying emotion often lands louder than the words.
-
-This isn't about blame. "Be careful" comes from love and protection. But when it's layered with visible anxiety, it can subtly undermine the confidence we're trying to build.
-
-**Try this:** Instead of "Go play, but be careful," try "Go explore! I'm here if you need me." You're still present and protective—but the message is confidence, not fear.`,
-    category: 'communication',
-    readTime: 2,
-    inspiredBy: 'Jon from WholeParent',
-  },
-  {
-    id: 'dont-be-afraid-backfires',
-    title: 'Why "Don\'t Be Afraid" Can Backfire',
-    excerpt: 'When we dismiss fear—even gently—we accidentally teach kids that some emotions aren\'t acceptable. The intention is comfort, but children hear "Your feeling is wrong."',
-    content: `Your child is nervous about something new. You want to reassure them, so you say, "Are you afraid? Don't be."
-
-The intention is comfort. But here's what they might hear: "Your feeling is wrong. You shouldn't feel this way."
-
-When we dismiss fear—even gently—we accidentally teach kids that some emotions aren't acceptable. They learn to hide what they're feeling instead of working through it.
-
-The truth is, fear is information. It's okay to feel nervous. What helps is acknowledgment, not dismissal.
-
-**Try this:** Replace "Don't be afraid" with "It's okay to feel nervous. I'm right here with you." You've validated the feeling and offered support without telling them their emotion is wrong.`,
-    category: 'communication',
-    readTime: 2,
-    inspiredBy: 'Jon from WholeParent',
-  },
-  {
-    id: 'encouragement-hidden-doubt',
-    title: 'When Encouragement Carries Hidden Doubt',
-    excerpt: 'Kids hear the whisper of "I hope you don\'t fail" even when you say "Go for it!" They sense when our encouragement is laced with anxiety about the outcome.',
-    content: `You want your child to try something new—a sport, a performance, a creative project. You say, "Go for it!" But under your breath or in your tone, there's a whisper of "I hope you don't fail."
-
-Kids hear that whisper. They sense when our encouragement is laced with anxiety about the outcome. And it can make them wonder: does my parent actually believe I can do this?
-
-This usually reflects *our* fears—of their disappointment, of watching them struggle—more than anything about their actual ability.
-
-**Try this:** Swap "I hope you don't fail" for "I'm excited to see what you create. Take your time." The focus shifts from outcome to process, and the message becomes genuine confidence.`,
-    category: 'communication',
-    readTime: 2,
-    inspiredBy: 'Jon from WholeParent',
-  },
-  {
-    id: 'express-yourself-double-bind',
-    title: 'The Double Bind of "Express Yourself (But Not Like That)"',
-    excerpt: 'When you tell your child it\'s okay to share feelings, then say "You\'re overreacting" when they do, you create a double bind. The child learns that openness is both required and punished.',
-    content: `You tell your child it's okay to share their feelings. Then when they do—loudly, messily, inconveniently—you say, "You're overreacting" or "Calm down."
-
-This creates what psychologists call a double bind: conflicting messages that leave kids confused about what's actually expected.
-
-The child learns that openness is both required and punished. Over time, they may stop sharing altogether, or become anxious about expressing emotions because they're not sure which response they'll get.
-
-**Try this:** When their emotional expression is bigger than you expected, resist the urge to correct the *feeling*. You can still address behavior ("I hear you're upset—I can't let you throw things") without dismissing the emotion underneath.`,
-    category: 'communication',
-    readTime: 2,
-    inspiredBy: 'Jon from WholeParent',
-  },
-  {
-    id: 'tone-says-more',
-    title: 'Your Tone Says More Than Your Words',
-    excerpt: 'Children are remarkably attuned to contradiction. They hear the words, but they feel the underlying message. When those don\'t match, they usually believe the feeling.',
-    content: `You say "You'll be fine!" but your voice is tight. You say "Have fun!" but you're gripping their hand a little too hard. You say "I trust you" while hovering nearby.
-
-Children are remarkably attuned to contradiction. They hear the words, but they *feel* the underlying message. When those don't match, they usually believe the feeling.
-
-This isn't about performing confidence you don't have. It's about noticing when your body and tone are sending a different message than your words—and deciding which one you actually want to communicate.
-
-**Try this:** Before a moment where you want to project confidence, check in with yourself. If you're feeling anxious, acknowledge it internally. Then choose words that match what you actually want them to hear, and try to let your body follow.`,
-    category: 'communication',
-    readTime: 2,
-    inspiredBy: 'Jon from WholeParent',
-  },
-  {
-    id: 'small-language-shifts',
-    title: 'Small Shifts in Language, Big Shifts in Message',
-    excerpt: 'The phrases we use on autopilot often carry more weight than we realize. A few small swaps can change what your child actually hears.',
-    content: `The phrases we use on autopilot often carry more weight than we realize. A few small swaps can change what your child actually hears:
-
-"Be careful" → "I'm here if you need me"
-"Don't be scared" → "It's okay to feel nervous"
-"I hope you don't fail" → "I'm excited to see what you try"
-"You'll be fine, but watch out" → "You've got this. I'll be right here"
-"Don't upset anyone" → "Say what's true for you"
-
-These shifts aren't about perfect phrasing. They're about aligning your words with the message you actually want to send: I believe in you. Your feelings are valid. You're safe to try.
-
-**Try this:** Pick one phrase you say often—"be careful" is a common one—and experiment with a replacement for a week. Notice if anything shifts in how your child responds.`,
-    category: 'communication',
-    readTime: 2,
-    inspiredBy: 'Jon from WholeParent',
-  },
-  {
-    id: 'children-notice-more',
-    title: 'Children Notice More Than You Think',
-    excerpt: 'Even when you think your child is shielded from upsetting news, they\'re picking up on more than you realize. You can\'t prevent exposure, but you can help them process what they experience.',
-    content: `Even when you think your child is shielded from upsetting news or world events, they're picking up on more than you realize. They overhear conversations, catch glimpses of screens, and absorb the emotional tone of the adults around them.
-
-Their observations may focus on details that seem small to you—but to them, those details feel significant. A news image, a worried phone call, a tense dinner conversation.
-
-You can't always prevent exposure to difficult topics. But you can help them process what they experience and guide them toward emotional understanding.
-
-**Try this:** Instead of assuming they haven't noticed something, ask: "Have you heard or seen anything that's been on your mind lately?" Start from their perspective, not yours.`,
-    category: 'difficult-conversations',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'regulate-before-conversation',
-    title: 'Regulate Yourself Before the Conversation',
-    excerpt: 'Children absorb the emotions of adults around them. Before talking about difficult topics, take a moment to process your own feelings first—so the conversation is grounded, calm, and safe.',
-    content: `Children absorb the emotions of the adults around them. If you're anxious, upset, or unsettled about something in the news or the world, they'll feel it—even if you don't say a word.
-
-Before talking with your child about difficult topics, take a moment to process your own feelings first. This isn't about hiding your emotions; it's about making sure the conversation is grounded, calm, and safe.
-
-When you're regulated, you can hold space for their feelings without adding your own unprocessed anxiety into the mix.
-
-**Try this:** Before a hard conversation, check in with yourself. Take a few breaths, notice what you're feeling, and let your nervous system settle. Then approach your child from that calmer place.`,
-    category: 'difficult-conversations',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'let-them-lead',
-    title: 'Let Them Lead the Conversation',
-    excerpt: 'When something difficult has happened, your instinct might be to explain or fix. But the most powerful thing you can do is listen first. Presence and attention matter more than perfect answers.',
-    content: `When something difficult has happened—in the news, at school, in the world—your instinct might be to explain, reassure, or fix. But the most powerful thing you can do is listen first.
-
-Ask what they've seen or heard. Ask what's on their mind. Let them tell you what they're thinking before you offer your perspective.
-
-This isn't about having perfect answers. It's about presence and attention. When children feel truly heard, they feel safe—even when the topic is scary.
-
-**Try this:** Sit together in a quiet space. You might invite them to draw or play while talking—some kids share more easily when their hands are busy. Let them lead. Your job is to listen.`,
-    category: 'difficult-conversations',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'match-words-to-understanding',
-    title: 'Match Your Words to Their Understanding',
-    excerpt: 'Adjust your language to your child\'s age and developmental level. You don\'t need to share every detail—just enough to help them make sense of what they\'ve encountered.',
-    content: `When talking about difficult topics, adjust your language to your child's age and developmental level. A four-year-old needs something very different from a ten-year-old.
-
-Use simple, honest language. You don't need to share every detail—just enough to help them make sense of what they've encountered. If you don't know how to answer something, it's okay to say, "That's a hard question. Let me think about it."
-
-The goal isn't to have all the answers. It's to make them feel safe asking the questions.
-
-**Try this:** Start with an open question like, "I heard there are some intense things online. Have you seen anything like that?" Then let their response guide how much detail you share.`,
-    category: 'difficult-conversations',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'different-kids-react-differently',
-    title: 'Different Kids React Differently',
-    excerpt: 'Some kids will talk and ask questions; others may joke or focus on play. Both responses are normal. Your job is to provide reassurance and safety, and stay open for when they\'re ready.',
-    content: `When children encounter something upsetting, they don't all respond the same way. Some will talk and ask a lot of questions. Others may joke, get silly, or focus on play—unsure how to express what they're feeling.
-
-Both responses are normal. Silence doesn't mean they're unaffected. Joking doesn't mean they don't care. These are just different ways of processing.
-
-Your job isn't to force a particular reaction. It's to provide reassurance and safety, and to stay open for whenever they're ready to talk.
-
-**Try this:** If your child seems quiet or "off" after exposure to something difficult, don't push. Instead, offer connection without pressure: sit together while coloring, read a story, or take a walk. Let closeness do the work.`,
-    category: 'difficult-conversations',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'misinformation',
-    title: 'Helping Kids Navigate Misinformation',
-    excerpt: 'Children encounter misleading content online all the time. Your role isn\'t to dismiss what they\'ve seen, but to guide them through it—helping them build the skill of thinking critically.',
-    content: `Children encounter misleading or incomplete content online all the time. They may see something presented as fact that isn't true, or hear a peer repeat something alarming without context.
-
-Your role isn't to dismiss what they've seen, but to guide them through it. Calmly discuss what's true, what's unclear, and what might need more explanation. Help them build the skill of thinking critically.
-
-This isn't about making them cynical—it's about teaching them to pause and consider before believing everything they see.
-
-**Try this:** When they share something they've seen online, respond with curiosity instead of correction: "That's interesting—what do you think about that?" Then gently explore it together.`,
-    category: 'difficult-conversations',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'invite-dialogue',
-    title: 'Invite Dialogue Even When They Don\'t Ask',
-    excerpt: 'Sometimes children won\'t bring up what\'s bothering them. You can gently create space for them to share—opening a door they can walk through when they\'re ready.',
-    content: `Sometimes children won't bring up what's bothering them. They might not have the words, or they might not know it's okay to talk about it.
-
-Even if your child doesn't ask directly, you can gently create space for them to share. This shows them that difficult topics aren't off-limits and that you're a safe person to talk to.
-
-You're not forcing a conversation—you're opening a door they can walk through when they're ready.
-
-**Try this:** If you notice they seem quiet or affected by something, try: "I noticed you seemed thoughtful after seeing that. Would you like to tell me what you were thinking?" Let them know it's safe to share—or safe to say "not right now."`,
-    category: 'difficult-conversations',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'conversations-start-at-home',
-    title: 'Why These Conversations Start at Home',
-    excerpt: 'Schools may teach about bodies and boundaries, but the heart of it happens at home. You are the person your child trusts most—these small, sometimes awkward questions are the ones that matter most.',
-    content: `Schools may teach about bodies, boundaries, and relationships—but the heart of it happens at home. You are the person your child trusts most. When they feel safe, heard, and taken seriously, they'll bring their questions to you.
-
-These questions often come at inconvenient moments—while washing hands, walking to school, after a TV show. They're fleeting and easy to miss. But these tiny, sometimes awkward questions are exactly the ones that matter most. They're windows into how your child understands themselves, others, and the world.
-
-If we rush past or dismiss these moments, we risk leaving children without the language or confidence to understand their bodies, recognize changes, or set boundaries. But when we respond with calm and openness, we give them tools that last a lifetime.
-
-**Try this:** Notice when your child asks something that feels a little vulnerable or curious. Resist the urge to deflect. Even a simple "That's a good question—let me think about how to explain it" keeps the door open.`,
-    category: 'bodies-consent',
-    readTime: 3,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'answer-the-question-asked',
-    title: 'Answer the Question They Asked—Nothing More',
-    excerpt: 'When your child asks about bodies, you don\'t need a lecture. A simple, honest answer is enough. Overthinking can actually shut down curiosity.',
-    content: `Your child asks, "Why do boys and girls have different body parts?" Your instinct might be to launch into a comprehensive explanation. But you don't need a lecture.
-
-A simple, honest answer using correct anatomical words is enough. This shows respect for their curiosity and builds trust. When they feel safe, they'll come back with the next question when they're ready.
-
-Overthinking or overexplaining can actually shut down curiosity. Match your answer to what they actually asked.
-
-**Try this:** Next time they ask a body or boundaries question, pause before answering. Ask yourself: what are they actually asking? Give that answer simply and directly. Then wait—they'll let you know if they want more.`,
-    category: 'bodies-consent',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'normalize-curiosity',
-    title: 'Normalize Curiosity at Every Age',
-    excerpt: 'Curiosity about bodies and feelings is completely natural—it\'s developmental, not inappropriate. When you respond calmly, you teach them their curiosity is welcome.',
-    content: `From toddlers asking where babies come from to older kids noticing changes in their own bodies, curiosity about bodies and feelings is completely natural. It's not inappropriate—it's developmental.
-
-When you respond calmly ("That's a great question—let's talk about it"), you teach them that their curiosity is welcome. When you tense up or change the subject, they learn these topics are shameful or off-limits.
-
-Even brief conversations help them understand themselves and others. You don't need to cover everything at once.
-
-**Try this:** When a body or feelings question catches you off guard, try responding with "I'm glad you asked" before you say anything else. It buys you a moment to think and signals that the question is welcome.`,
-    category: 'bodies-consent',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'everyday-conversation-starters',
-    title: 'Use Everyday Moments as Conversation Starters',
-    excerpt: 'Talking about bodies and boundaries doesn\'t need to be a formal sit-down conversation. It works better when woven into everyday life—short, casual interactions without the pressure of a "big talk."',
-    content: `Talking about bodies, feelings, and boundaries doesn't need to be a formal sit-down conversation. In fact, it works better when it's woven into everyday life.
-
-While washing up, setting the table, or walking to school, you can casually bring things up: "I noticed in the movie the character had a hard time saying no—how would you feel in that situation?" or "Your body is growing, and that's totally normal. Have you noticed any changes?"
-
-These short, casual interactions teach respect, consent, and self-awareness naturally—without the pressure of a "big talk."
-
-**Try this:** Pick one everyday moment this week—a car ride, a walk, a meal—and bring up something you noticed in a show or book. Ask what they think. Keep it light and curious.`,
-    category: 'bodies-consent',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'safe-space-feelings',
-    title: 'Create a Safe Space for Feelings and Boundaries',
-    excerpt: 'Children need practice putting words to their emotions and boundaries. Encourage them to share by asking open questions—these conversations build the language they\'ll need to advocate for themselves.',
-    content: `Children are learning not just about bodies, but about emotions, social signals, and where their boundaries are. They need practice putting words to these experiences.
-
-Encourage them to share what they're feeling by asking open questions: "It seems like you felt upset when your friend said that. What do you think is okay in that situation?" or "If someone touches you and it doesn't feel right, it's okay to say no—and you can always tell me."
-
-These conversations build the language they'll need to advocate for themselves as they grow.
-
-**Try this:** After a social situation that seemed to affect them, ask gently: "How did that feel for you?" Don't rush to fix or advise—just listen to what they say.`,
-    category: 'bodies-consent',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'okay-to-feel-awkward',
-    title: 'It\'s Okay to Feel Awkward',
-    excerpt: 'If talking about bodies feels uncomfortable for you, that\'s normal. You don\'t have to hide your awkwardness—children learn it\'s safe to be curious when they see you respond honestly, even imperfectly.',
-    content: `If talking about bodies or boundaries feels uncomfortable for you, that's normal. Many of us didn't grow up with these conversations modeled well.
-
-Here's the thing: you don't have to hide your awkwardness. You can acknowledge it lightly: "This is a bit tricky to talk about, but I'm glad you asked."
-
-Children notice when we avoid, shame, or shut down topics. But when they see you respond honestly—even imperfectly—they learn it's safe to be curious and express themselves.
-
-**Try this:** Next time a question makes you uncomfortable, try naming it: "I feel a little awkward talking about this, but it's important, so let's figure it out together." Your honesty models emotional authenticity.`,
-    category: 'bodies-consent',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'respect-privacy',
-    title: 'Respect Privacy While Staying Available',
-    excerpt: 'Some questions will be whispered, some shouted at the worst moment. Give your child space to ask privately, and never dismiss their curiosity—small, attentive moments matter more than long talks.',
-    content: `Some questions will be whispered. Some will be shouted across the room at the worst possible moment. Both are normal.
-
-Give your child the space to ask privately when they need it. Never dismiss their curiosity or make them feel embarrassed for asking. A small, attentive moment often matters more than a long, planned talk.
-
-Let them know—through your responses over time—that they can always come to you, no matter what the question is.
-
-**Try this:** Create a low-pressure way for them to bring things up. Some families use a "question jar" or a code phrase. Others simply say, "You can always ask me anything, even if it feels weird." Then follow through when they do.`,
-    category: 'bodies-consent',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'small-moments-lifelong-skills',
-    title: 'Small Moments Build Lifelong Skills',
-    excerpt: 'Every small conversation about bodies and boundaries—answered with calm and respect—helps your child develop the language, confidence, and awareness they\'ll need for life.',
-    content: `Every small conversation about bodies, feelings, and boundaries—answered with calm and respect—helps your child develop crucial skills: the language to understand their own body, the confidence to recognize changes, the ability to express consent, and the awareness to respect others' boundaries.
-
-These moments may seem tiny. A question in the car. A comment while brushing teeth. A whispered curiosity at bedtime.
-
-But they create a foundation of trust, confidence, and self-understanding that will stay with them for life. You're not just answering questions—you're teaching them that their experiences matter and their voice is worth using.
-
-**Try this:** Reframe these conversations in your mind. They're not awkward interruptions—they're opportunities to build something lasting. Show up for the small moments, and the big ones will take care of themselves.`,
-    category: 'bodies-consent',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'relationship-is-parenting',
-    title: 'Your Relationship Is Part of Your Parenting',
-    excerpt: 'The way you communicate with your partner directly shapes how your children experience family life. Research shows that improving relationship dynamics leads to fewer emotional symptoms in children.',
-    content: `It's easy to focus all your parenting energy on your children—getting them to school, managing meltdowns, navigating bedtime. But one of the most overlooked aspects of family life is the relationship between you and your partner.
-
-The way you communicate, manage stress, and resolve conflict with each other directly shapes how your children experience family life. Research shows that when parents improve their relationship dynamics, children show fewer emotional and behavioral symptoms—less anxiety, sadness, and even fewer physical complaints like headaches and stomach aches.
-
-Your children are watching how you handle challenges together. That's parenting too.
-
-**Try this:** This week, notice one moment of tension with your partner. Instead of focusing on the disagreement itself, ask yourself: what are my kids learning about relationships from how we're handling this?`,
-    category: 'partner-communication',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'small-tensions-add-up',
-    title: 'Small Tensions Add Up',
-    excerpt: 'Relationships aren\'t just shaped by major arguments—it\'s the subtle moments of miscommunication that set the tone. When left unchecked, these create a habit of reaction rather than response.',
-    content: `Relationships aren't just shaped by major arguments. Often, it's the subtle moments—a sharp remark about chores, a misunderstanding when you're tired, an automatic reaction to stress—that set the tone.
-
-When left unchecked, these small interactions create a habit of reaction rather than response. One partner feels unheard, the other feels misunderstood, and resentment builds quietly in the background.
-
-It's easy to think, "If only they would change, everything would be better." But when we focus only on our partner's faults, we miss the chance to reflect on our own role in the dynamic.
-
-**Try this:** The next time you feel a small tension rising, pause before reacting. Ask yourself: am I responding to what's actually happening, or am I reacting to something deeper—tiredness, stress, an old pattern?`,
-    category: 'partner-communication',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'triggers-not-about-partner',
-    title: 'Your Triggers Aren\'t Always About Your Partner',
-    excerpt: 'Much of relationship tension comes from unmet needs or unexpressed emotions from long before your current relationship. When we pause to consider our own patterns, we open space for healthier conversations.',
-    content: `Much of the tension in relationships comes from unmet needs or unexpressed emotions—often from long before your current relationship.
-
-Maybe your partner's frustration reminds you of how you were treated as a child. Maybe an offhand comment triggers feelings of inadequacy you've carried for years. In these moments, the situation may not be about your partner at all.
-
-When we pause to consider our own emotional patterns, we open up the possibility for healthier conversations and deeper understanding—instead of repeating the same conflicts.
-
-**Try this:** After a disagreement, reflect privately: what feeling got triggered in me? Is this really about what my partner said, or is there something older underneath? You don't have to solve it—just notice.`,
-    category: 'partner-communication',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'pause-before-respond',
-    title: 'Pause Before You Respond',
-    excerpt: 'Reacting in the heat of the moment usually escalates things. A brief pause allows you to choose a response rather than a reaction—changing the trajectory of the conversation.',
-    content: `When you feel yourself getting frustrated with your partner, your first instinct might be to respond immediately—to defend, explain, or push back. But reacting in the heat of the moment usually escalates things.
-
-Try taking a breath and counting slowly before you speak. This brief pause allows you to process your emotions and choose a response rather than a reaction.
-
-It's a small shift, but it changes the trajectory of the conversation. You're no longer acting out of frustration—you're responding with intention.
-
-**Try this:** Next time you feel tension rising, try counting to ten (or twenty) before you say anything. Notice how different the conversation feels when you respond from a calmer place.`,
-    category: 'partner-communication',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'acknowledge-before-respond',
-    title: 'Acknowledge Before You Respond',
-    excerpt: 'Before jumping into problem-solving or defending yourself, try acknowledging your partner\'s feelings first. It shifts the conversation from adversarial to collaborative.',
-    content: `Before jumping into problem-solving or defending yourself, try acknowledging your partner's feelings first. This creates an empathetic connection and shows that you value their perspective—even if you disagree.
-
-Something as simple as "I can see you're upset, and I understand why you might feel that way" can change the entire tone of a conversation. It shifts from adversarial to collaborative.
-
-Acknowledgment doesn't mean you agree. It means you're signaling that their experience matters to you.
-
-**Try this:** In your next disagreement, lead with acknowledgment before anything else. Notice how it changes the dynamic when your partner feels heard first.`,
-    category: 'partner-communication',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'i-statements',
-    title: 'Use "I" Instead of "You"',
-    excerpt: '"You never listen" puts your partner on the defensive. "I feel unheard when we have these discussions" expresses your experience without attacking—communicating in a way that actually gets heard.',
-    content: `When we're frustrated, it's easy to make statements that sound like blame: "You never listen." "You always do this." These put your partner on the defensive immediately.
-
-Shifting to "I" statements changes the conversation. Instead of "You never listen," try "I feel unheard when we have these discussions." You're expressing your experience without attacking.
-
-This isn't about tiptoeing around issues—it's about communicating in a way that actually gets heard.
-
-**Try this:** Think of a recurring frustration with your partner. Reframe it as an "I" statement: "I feel ___ when ___." Practice saying it out loud before the next conversation.`,
-    category: 'partner-communication',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'assume-positive-intent',
-    title: 'Assume Positive Intent',
-    excerpt: 'When disagreements arise, it\'s easy to assume the worst. But what if you reframed? Assuming positive intent means approaching your partner with curiosity rather than accusation.',
-    content: `When disagreements arise, it's easy to assume the worst about your partner's intentions. They forgot something—they must not care. They're distracted—they must not be listening.
-
-But what if you reframed? Maybe they're overwhelmed. Maybe they're carrying stress you can't see. Maybe their intention was good even if the execution wasn't.
-
-Assuming positive intent doesn't mean ignoring real problems. It means approaching your partner with curiosity rather than accusation.
-
-**Try this:** Next time you feel yourself assuming the worst, pause and ask: what's a generous interpretation of what just happened? How might I respond differently if I believed that?`,
-    category: 'partner-communication',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'seek-to-understand',
-    title: 'Seek to Understand, Not to Win',
-    excerpt: 'In conflict, it\'s tempting to focus on being right. But winning usually means someone loses. What if you approached disagreements with curiosity instead?',
-    content: `In conflict, it's tempting to focus on being right. You build your case, gather your evidence, and try to "win" the argument. But winning usually means someone loses—and that's not great for a partnership.
-
-What if you approached disagreements with curiosity instead? "Can you help me understand why you feel that way?" opens space for a real conversation, not a debate.
-
-The goal isn't to be right. It's to understand each other better.
-
-**Try this:** In your next disagreement, resist the urge to make your point. Instead, ask a genuine question about their perspective first. See what shifts.`,
-    category: 'partner-communication',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'consistency-builds-trust',
-    title: 'Consistency Builds Trust',
-    excerpt: 'When your partner knows you\'ll approach conflicts with calm and respect, it creates safety. This consistency is built through repeated small moments where you choose thoughtful response over reactive behavior.',
-    content: `When your partner knows you'll approach conflicts with calm and respect—even when things are hard—it creates safety. They can express themselves without fear of explosion or shutdown.
-
-This consistency doesn't happen overnight. It's built through repeated small moments where you choose thoughtful response over reactive behavior.
-
-Over time, this predictability reduces misunderstandings and strengthens emotional connection. Your partner learns they can trust how you'll show up.
-
-**Try this:** Pick one practice from these lessons—pausing, acknowledging, using "I" statements—and commit to it for a week. Consistency in small things builds trust in big ones.`,
-    category: 'partner-communication',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'modeling-relationships',
-    title: 'You\'re Modeling Relationships for Your Kids',
-    excerpt: 'Every time you navigate a disagreement with your partner, your children are learning. The effort you put into your partnership is also an investment in their future relationships.',
-    content: `Every time you and your partner navigate a disagreement, your children are learning. They're watching how you handle frustration, how you repair after conflict, how you speak to each other when things are hard.
-
-By responding with empathy and understanding—even imperfectly—you're teaching them emotional regulation, respect, and what healthy relationships look like.
-
-This doesn't mean you have to be perfect. It means the effort you put into your partnership is also an investment in your children's future relationships.
-
-**Try this:** After you and your partner work through a disagreement well, name it for your kids if appropriate: "We disagreed about something, and we talked it through. That's how we figure things out." Let them see the process.`,
-    category: 'partner-communication',
-    readTime: 2,
-    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
-  },
-  {
-    id: 'boredom-good-sign',
-    title: '"I\'m Bored" Is a Good Sign',
-    excerpt: 'When your child announces they\'re bored, it\'s often a sign you\'re doing something right. Boredom means there\'s space—and that space is where creativity, independence, and problem-solving grow.',
-    content: `When your child announces they're bored, your first instinct might be to jump in with suggestions or feel guilty that you're not doing enough. But here's a reframe: "I'm bored" is often a sign you're doing something right.
-
-Boredom means there's space. It means your child isn't over-scheduled to the point of never having a moment to fill themselves. That space is where creativity, independence, and problem-solving grow.
-
-"I'm bored" is usually a bid for connection, not a request for entertainment. If you can step back from the defensive feeling, you can guide your child without taking over their play.
-
-**Try this:** Next time you hear "I'm bored," resist the urge to fix it immediately. Take a breath and remind yourself: this is an opportunity, not a failure.`,
+**Try this:** Next time you hear "I\'m bored," resist the urge to fix it immediately. Instead:
+1. Check basic needs
+2. Validate: "Boredom is okay. What do you think you might want?"
+3. Ask one connecting question based on their interests
+4. Step back and let them decide`,
     category: 'play',
-    readTime: 2,
+    readTime: 4,
     inspiredBy: 'Dr. Aliza Pressman',
   },
   {
-    id: 'check-basic-needs',
-    title: 'Check Basic Needs First',
-    excerpt: 'Before responding to "I\'m bored" with suggestions or frustration, pause and check the basics—hunger, tiredness, connection. Sometimes boredom is just the surface of a simpler need.',
-    content: `Before you respond to "I'm bored" with suggestions or frustration, pause and check the basics. At any age, these still matter—and addressing them first prevents you from overreacting to a problem that a granola bar could solve.
+    id: 'supporting-independent-play',
+    title: 'How to Support Independent Play',
+    excerpt: 'Your role isn\'t to run the show—it\'s to observe, reflect, and let your child take the lead. Strategic toy placement also removes barriers to independent play.',
+    content: `To support independent play, parents need to shift from leading to observing. This is harder than it sounds because our instinct is to direct, suggest, and teach.
 
-Are they hungry? Are they overtired? Have you had even a few minutes of genuine connection today?
+**Shift your role:**
 
-Sometimes boredom is just the surface. Underneath might be a need that's easier to meet than you think.
+Instead of: "Let\'s build a tower!"
+Try: "Oh, you noticed how that stacks. You\'re building something tall."
 
-**Try this:** Make it a habit to run through the basics mentally before responding to complaints of boredom: food, rest, connection. Address those first if needed.`,
-    category: 'play',
-    readTime: 2,
-    inspiredBy: 'Dr. Aliza Pressman',
-  },
-  {
-    id: 'validate-boredom',
-    title: 'Validate Boredom Instead of Fixing It',
-    excerpt: 'If basic needs are met and your child is still bored, your job isn\'t to hand them a list of activities—it\'s to validate the feeling and help them get comfortable with it.',
-    content: `If basic needs are met and your child is still bored, your next move isn't to hand them a list of activities. It's to validate the feeling and help them get comfortable with it.
+You\'re reflecting what you see without interrupting. You want them to feel like the star of their own play.
 
-Try saying something like: "Boredom is a good thing. I don't think you really want me to tell you what to do, but I can help you think of what to do."
+Think of yourself as an extra supporting the lead actor, not the director.
 
-Your calm is contagious. If you can be relaxed about their boredom, it helps them settle too. Avoid rattling off suggestions—that usually leads to a string of "no"s and more frustration for everyone.
+**Reflect without interrupting:**
 
-**Try this:** When they say "I'm bored," try responding with: "That's okay. Boredom usually means something interesting is about to happen. What do you think you might want to do?"`,
-    category: 'play',
-    readTime: 2,
-    inspiredBy: 'Dr. Aliza Pressman',
-  },
-  {
-    id: 'scaffold-thinking',
-    title: 'Scaffold Their Thinking, Don\'t Solve It',
-    excerpt: 'Guide your child toward their own ideas rather than handing them yours. The goal is to bridge "I\'m bored" to an idea that comes from them—building confidence around play.',
-    content: `Once your child is calm, gently guide them toward their own ideas rather than handing them yours. The goal is to bridge the gap between "I'm bored" and an idea that comes from them—not you.
+- "You\'re stacking those really high."
+- "Oh, you noticed how that rolls."
+- "I see you\'re connecting those pieces together."
 
-This builds confidence around play. You're keeping the ball in their court.
+You\'re validating their ideas while staying out of the way.
 
-Try reminding them of something they were working on before that got interrupted, or connect to a current interest: "I remember you were building that castle yesterday and had to stop for dinner. Do you want to go back to it?" or "You were telling me about that Bluey episode—I wonder if you want to play something like that?"
+**Create "play pockets" around your home:**
 
-**Try this:** Instead of offering a list of activities, ask one connecting question based on something they recently loved or were working on. Let the idea feel like it came from them.`,
-    category: 'play',
-    readTime: 2,
-    inspiredBy: 'Dr. Aliza Pressman',
-  },
-  {
-    id: 'observer-not-director',
-    title: 'Be the Observer, Not the Director',
-    excerpt: 'To support independent play, shift from leading to observing. Your role isn\'t to run the show—it\'s to reflect what you see and let your child take the lead.',
-    content: `To support independent play, parents need to shift from leading to observing. Your role isn't to run the show—it's to reflect what you see and let your child take the lead.
+A "play pocket" is a small, intentional collection of simple toys placed in spots where you need your child to play independently—near where life happens.
 
-Step back and notice what they're already drawn to, whether it's a shadow on the wall or a toy they keep returning to. Reflect without interrupting: "Oh, you noticed how that rolls?" You want them to feel like the star of their own play.
-
-Think of yourself as an extra supporting the lead actor. This helps them build skills so you can gradually step back even more.
-
-**Try this:** During your child's next play session, try not to direct or suggest. Just observe and occasionally mirror what you see: "You're stacking those really high." Let them lead.`,
-    category: 'play',
-    readTime: 2,
-    inspiredBy: 'Dr. Aliza Pressman',
-  },
-  {
-    id: 'schedule-downtime',
-    title: 'Schedule Downtime Like It Matters',
-    excerpt: 'Unscheduled time is where play happens—where children learn to tolerate boredom and generate their own ideas. Schedule downtime with the same fierceness you would any enrichment activity.',
-    content: `We schedule soccer practice and piano lessons with intention. But downtime? That often gets treated as leftover space—whatever's left after the "real" activities.
-
-Here's the thing: unscheduled time is where play happens. It's where children learn to be comfortable in their own skin, to tolerate boredom, to generate their own ideas. These are skills that over-scheduling actually prevents.
-
-Schedule downtime with the same fierceness you would any enrichment activity. Protect it. It's not wasted time—it's essential.
-
-**Try this:** Look at your family's week. Is there protected time with nothing scheduled? If not, block some out intentionally. Treat it as non-negotiable.`,
-    category: 'play',
-    readTime: 2,
-    inspiredBy: 'Dr. Aliza Pressman',
-  },
-  {
-    id: 'play-pockets',
-    title: 'Create "Play Pockets" Around Your Home',
-    excerpt: 'A "play pocket" is a small collection of simple toys placed where you need your child to play independently—removing barriers and making independent play easier to start.',
-    content: `A "play pocket" is a small, intentional collection of simple toys placed in spots where you need your child to play independently—near where life happens.
-
-The bathroom cabinet can hold small cars and figurines for when you're bathing another child. A kitchen drawer can have safe, simple toys for play at your feet while you cook. A laundry room shelf might have books, magnetic tiles, or even rags for "folding alongside you."
+Examples:
+- Bathroom cabinet: small cars and figurines for when you\'re bathing another child
+- Kitchen drawer: safe, simple toys for play at your feet while you cook
+- Laundry room shelf: books, magnetic tiles, or even rags for "folding alongside you"
 
 The idea is to remove barriers. If toys are locked away or hard to reach, independent play is harder to start. Making materials accessible and visible changes everything.
 
-**Try this:** Identify one spot in your home where you often need your child to be independent. Stock it with a few simple, rotating toys. See if it changes your daily flow.`,
+**Schedule downtime like it matters:**
+
+We schedule soccer practice and piano lessons with intention. But downtime gets treated as leftover space—whatever\'s left after the "real" activities.
+
+Here\'s the thing: unscheduled time is where play happens. It\'s where children learn to be comfortable in their own skin, to tolerate boredom, to generate their own ideas.
+
+Schedule downtime with the same fierceness you would any enrichment activity. Protect it. It\'s not wasted time—it\'s essential.
+
+**Why over-scheduling backfires:**
+
+Parents over-schedule because they want to build executive function, confidence, and resilience. But here\'s the irony: independent play—where the idea is truly child-led—builds those exact skills.
+
+When children are constantly told what to do and when, they miss opportunities to practice decision-making, problem-solving, and self-direction.
+
+You don\'t have to fill every moment for your child to thrive. The unfilled moments might be the most important ones.
+
+**Try this:** This week:
+1. Identify one spot in your home where you often need your child to be independent. Stock it with a few simple, rotating toys.
+2. During play time, observe without directing. Notice what they\'re drawn to and reflect it back.
+3. Look at your family\'s week. Is there protected downtime with nothing scheduled? If not, block some out intentionally.`,
     category: 'play',
-    readTime: 2,
+    readTime: 5,
     inspiredBy: 'Dr. Aliza Pressman',
+  },
+  {
+    id: 'what-i-say-vs-how-i-say-it',
+    title: 'What I Say Matters Less Than How I Say It',
+    excerpt: 'Children are attuned to contradiction. They hear the words, but they feel the underlying emotion. When those don\'t match, they usually believe the feeling.',
+    content: `You say "You\'ll be fine!" but your voice is tight.
+You say "Have fun!" but you\'re gripping their hand too hard.
+You say "I trust you" while hovering nearby.
+
+Children are remarkably attuned to contradiction. They hear the words, but they *feel* the underlying message. When those don\'t match, they usually believe the feeling.
+
+**Examples of mismatches:**
+
+What you say: "Go play!"
+What you feel: "I\'m anxious about you getting hurt"
+What they hear: "This isn\'t actually safe"
+
+What you say: "You\'ll do great!"
+What you feel: "I hope you don\'t fail"
+What they hear: "I don\'t actually believe in you"
+
+What you say: "Go explore!"
+What you feel: "Be careful be careful be careful"
+What they hear: "This is dangerous"
+
+**Why this matters:**
+
+Kids don\'t just listen to words. They sense your hesitation, your body language, your tone. Your anxiety becomes theirs.
+
+**The practical fix:**
+
+This isn\'t about performing confidence you don\'t have. It\'s about noticing when your body and tone are sending a different message than your words—and deciding which one you actually want to communicate.
+
+Before a moment where you want to project confidence:
+1. Check in with yourself. What am I actually feeling?
+2. If you\'re feeling anxious, acknowledge it internally: "I\'m nervous, and that\'s okay."
+3. Then choose words that match what you actually want them to hear
+4. Try to let your body follow
+
+**Small language shifts that help:**
+
+Instead of: "Go play, but be careful!" (nervous tone)
+Say: "Go explore! I\'m here if you need me." (calm tone)
+
+Instead of: "Don\'t be scared!" (anxious energy)
+Say: "It\'s okay to feel nervous. I\'m right here." (calm presence)
+
+Instead of: "I hope you don\'t fail!" (worried tone)
+Say: "I\'m excited to see what you create. Take your time." (genuine confidence)
+
+**Try this:** Before your child tries something new, check in with yourself. If you\'re feeling anxious, acknowledge it internally. Then speak from a calmer place. Notice how your child responds differently when your words and energy match.`,
+    category: 'communication',
+    readTime: 4,
+    inspiredBy: 'Jon from WholeParent',
+  },
+  {
+    id: 'hidden-messages-im-sending',
+    title: 'The Hidden Messages I\'m Sending',
+    excerpt: 'Even when we say nothing, we\'re communicating. Even well-intentioned words like "be careful" and "don\'t be scared" send messages we don\'t intend.',
+    content: `"Be careful!"
+"Don\'t be scared!"
+"Don\'t be sad!"
+"Try again, I know you can do it!"
+
+These sound supportive. But what are kids actually hearing?
+
+**"Be careful!" with a nervous tone**
+You hear: "I want you to stay safe"
+They hear: "This is dangerous. I\'m not sure you can do this"
+
+They sense your underlying doubt and may interpret it as: "My parent doesn\'t think I can handle this."
+
+**"Don\'t be scared/sad/upset!"**
+You hear: "It\'s okay, nothing bad will happen"
+They hear: "Your feeling is wrong. You shouldn\'t feel this way"
+
+When we dismiss fear—even gently—we accidentally teach kids that some emotions aren\'t acceptable. They learn to hide what they\'re feeling.
+
+**"Don\'t be afraid!"**
+You hear: "I\'m trying to reassure you"
+They hear: "Your fear is not valid. Something about this situation is actually scary, but I\'m telling you not to feel it"
+
+Fear is information. It\'s okay to feel nervous. What helps is acknowledgment, not dismissal.
+
+**"I hope you don\'t fail!" (whispered in tone)**
+You hear: "I believe in you"
+They hear: "My parent is worried I\'ll mess up"
+
+Kids sense when our encouragement is laced with anxiety about the outcome. It makes them wonder: Does my parent actually believe I can do this?
+
+**What to say instead:**
+
+Instead of: "Be careful!"
+Say: "I\'m here if you need me"
+
+Instead of: "Don\'t be scared!"
+Say: "It\'s okay to feel nervous. I\'m right here with you"
+
+Instead of: "You\'re overreacting!"
+Say: "That\'s a big feeling. Let\'s sit with it together"
+
+Instead of: "I hope you don\'t fail!"
+Say: "I\'m excited to see what you create. Take your time"
+
+**Why these matter:**
+
+These small shifts align your words with the message you actually want to send:
+- I believe in you
+- Your feelings are valid
+- You\'re safe to try
+- I\'m here to support you
+
+**Try this:** Pick one phrase you say often to your child. Notice what underlying message you might be sending. Experiment with a replacement that matches what you actually want them to hear.`,
+    category: 'communication',
+    readTime: 4,
+    inspiredBy: 'Jon from WholeParent',
+  },
+  {
+    id: 'when-i-accidentally-shame-feelings',
+    title: 'When I Accidentally Shame My Kid\'s Feelings',
+    excerpt: 'When you tell your child it\'s okay to share feelings, then say "You\'re overreacting" when they do, you create confusion. Feelings are allowed. Unsafe behavior isn\'t.',
+    content: `You tell your child it\'s okay to share their feelings. Then when they do—loudly, messily, inconveniently—you say, "You\'re overreacting" or "Calm down" or "You\'re fine."
+
+This creates what psychologists call a double bind: conflicting messages that leave kids confused.
+
+**What a double bind sounds like:**
+
+Message 1: "You can tell me how you feel"
+Message 2: "Not like *that*"
+
+What they learn: "Openness is required AND punished"
+
+Over time, they may stop sharing altogether. Or they become anxious about expressing emotions because they\'re not sure which response they\'ll get.
+
+**Difference between feeling and behavior:**
+
+This is crucial: honoring feelings doesn\'t mean allowing any behavior.
+
+Feeling angry, sad, frustrated, disappointed? Always allowed.
+Yelling, hitting, throwing things, being disrespectful? Not allowed.
+
+**What to say instead of dismissing the feeling:**
+
+Instead of: "You\'re overreacting!"
+Say: "That\'s a big feeling. I see you\'re upset."
+
+Instead of: "Calm down!"
+Say: "Your body is having a big response. Let\'s take a break."
+
+Instead of: "You\'re fine!"
+Say: "I know this feels hard right now."
+
+Now you can add the boundary about behavior:
+"You\'re allowed to feel angry. I won\'t let you throw things. Let\'s find another way to get that anger out."
+
+**How to validate feeling AND hold behavior boundary:**
+
+"I hear you\'re upset. I can\'t let this turn into yelling. Do you need space, or do you want help calming down?"
+
+"You\'re frustrated. I won\'t let you be unkind to your sister. Let\'s take a break."
+
+"You\'re disappointed. That\'s real. And we\'re still going to bed on time."
+
+**Why this matters:**
+
+Kids need to know their emotions are acceptable. They also need to learn that how we express them matters. You\'re teaching both at the same time.
+
+**Try this:** Next time your child is expressing a big feeling in a way that\'s unsafe or disrespectful, pause. First validate the emotion, then address the behavior. "You\'re really upset (validation). I won\'t let you talk to me that way (boundary)."`,
+    category: 'communication',
+    readTime: 4,
+    inspiredBy: 'Jon from WholeParent',
+  },
+  {
+    id: 'before-i-correct-behavior',
+    title: 'Connect Before I Correct Behavior',
+    excerpt: 'Correction lands better after connection. When you acknowledge their experience first, they\'re more able to hear you.',
+    content: `When your child does something wrong, the instinct is to address the behavior immediately. But correction lands better after connection.
+
+"I know you\'re excited to tell me—try again after I finish this thought" works better than "Don\'t interrupt me!"
+
+The first one acknowledges their experience before redirecting. The second one just shuts them down.
+
+**Why connection comes first:**
+
+When kids feel seen, they\'re more able to hear you. When they feel dismissed, they get defensive or shut down.
+
+Connection doesn\'t mean you skip the correction. It means you make sure they feel seen first, which makes them more receptive to what you\'re saying.
+
+**The structure:**
+
+1. **Acknowledge their experience/need:** "I see you really want..."
+2. **State the boundary:** "I need you to..."
+3. **Offer an alternative:** "You can... instead"
+
+**Examples:**
+
+Instead of: "Stop interrupting!"
+Say: "I see you have something exciting to tell me. I need to finish this thought. You can wait here or draw while I finish, then I\'ll hear your story."
+
+Instead of: "Don\'t grab things!"
+Say: "I know you want that toy right now. We don\'t grab things from other people\'s hands. You can ask, or wait for your turn."
+
+Instead of: "You\'re being mean!"
+Say: "I see you\'re frustrated with your sister. I understand. You can\'t be unkind. You can tell her how you feel with words, or take space if you need to."
+
+**Why this works:**
+
+Kids are more likely to cooperate when they feel understood first. You\'re not excusing the behavior—you\'re acknowledging that their feelings make sense while still holding the boundary.
+
+**Try this:** Next time you need to correct behavior, lead with acknowledgment first. "You really wanted... AND we need to..." Notice how differently they respond.`,
+    category: 'communication',
+    readTime: 3,
+    inspiredBy: 'Seed & Sew',
+  },
+  {
+    id: 'talking-about-scary-news',
+    title: 'Talking About Scary News and World Events',
+    excerpt: 'Kids are picking up on more than you realize. You can\'t prevent exposure, but you can help them process what they experience with calm and presence.',
+    content: `Even when you think your child is shielded from upsetting news or world events, they\'re picking up on more than you realize. They overhear conversations, catch glimpses of screens, absorb the emotional tone of the adults around them.
+
+You can\'t always prevent exposure to difficult topics. But you can help them process what they experience.
+
+**Step 1: Regulate yourself first**
+
+Children absorb the emotions of the adults around them. If you\'re anxious, upset, or unsettled about something in the news, they\'ll feel it—even if you don\'t say a word.
+
+Before talking with your child about difficult topics, take a moment to process your own feelings. Take a few breaths, notice what you\'re feeling, and let your nervous system settle. Then approach your child from that calmer place.
+
+**Step 2: Let them lead**
+
+Instead of assuming they haven\'t noticed something, ask: "Have you heard or seen anything that\'s been on your mind lately?"
+
+Let them tell you what they\'ve seen or heard. Ask what\'s on their mind. This isn\'t about having perfect answers—it\'s about presence and attention.
+
+Sit together in a quiet space. Some kids share more easily when their hands are busy (drawing, coloring, walking).
+
+**Step 3: Match your words to their age**
+
+Adjust your language to your child\'s developmental level. A four-year-old needs something very different from a ten-year-old.
+
+Use simple, honest language. You don\'t need to share every detail—just enough to help them make sense of what they\'ve encountered.
+
+If you don\'t know how to answer something, it\'s okay to say: "That\'s a hard question. Let me think about it."
+
+**Step 4: Expect different responses**
+
+Some kids will talk and ask questions. Others may joke, get silly, or focus on play. Both are normal ways of processing.
+
+Silence doesn\'t mean they\'re unaffected. Joking doesn\'t mean they don\'t care. These are just different processing styles.
+
+If your child seems quiet or "off" after exposure to something difficult, offer connection without pressure: sit together while coloring, read a story, take a walk.
+
+**Step 5: Help them navigate misinformation**
+
+Children encounter misleading or incomplete content online. Your role isn\'t to dismiss what they\'ve seen, but to guide them through it.
+
+Respond with curiosity instead of correction: "That\'s interesting—what do you think about that?"
+
+Then gently explore it together: "Is that from a reliable source? What might be missing from that story?"
+
+You\'re teaching them to pause and consider before believing everything they see.
+
+**Step 6: Keep the door open**
+
+Even if your child doesn\'t ask directly about something, you can gently create space for them to share.
+
+"I noticed you seemed thoughtful after seeing that. Would you like to tell me what you were thinking?"
+
+You\'re not forcing a conversation—you\'re opening a door they can walk through when ready.
+
+**Try this:** Pick a difficult topic your child might have encountered. Approach them with curiosity: "Have you heard about...? What do you know?" Then listen. Your calm presence matters more than having all the answers.`,
+    category: 'difficult-conversations',
+    readTime: 6,
+    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
+  },
+  {
+    id: 'talking-about-bodies-and-boundaries',
+    title: 'Talking About Bodies, Boundaries, and Consent',
+    excerpt: 'Schools may teach about bodies, but the heart of it happens at home. Normalize curiosity, answer questions simply, and keep the conversation ongoing—not a one-time "talk."',
+    content: `Schools may teach about bodies, boundaries, and relationships—but the heart of it happens at home. You are the person your child trusts most.
+
+These conversations often come at inconvenient moments—while washing hands, walking to school, after a TV show. They\'re fleeting and easy to miss. But these tiny, sometimes awkward questions are exactly the ones that matter most.
+
+**Why this matters:**
+
+If we rush past or dismiss these moments, we risk leaving children without the language or confidence to understand their bodies, recognize changes, or set boundaries.
+
+But when we respond with calm and openness, we give them tools that last a lifetime.
+
+**Step 1: Normalize curiosity**
+
+From toddlers asking where babies come from to older kids noticing changes in their own bodies, curiosity about bodies and feelings is completely natural. It\'s not inappropriate—it\'s developmental.
+
+When you respond calmly ("That\'s a great question—let\'s talk about it"), you teach them that their curiosity is welcome.
+
+When you tense up or change the subject, they learn these topics are shameful or off-limits.
+
+**Step 2: Answer the question they asked—nothing more**
+
+Your child asks, "Why do boys and girls have different body parts?"
+
+Your instinct might be to launch into a comprehensive explanation. But you don\'t need a lecture.
+
+A simple, honest answer using correct anatomical words is enough. This shows respect for their curiosity and builds trust.
+
+Overthinking or overexplaining can actually shut down curiosity. Match your answer to what they actually asked.
+
+**If you don\'t know how to answer:**
+"I\'m glad you asked" (buys you a moment to think)
+"That\'s a good question. Let me think about how to explain it"
+"That\'s a hard question. Let me think about it"
+
+All of these keep the door open.
+
+**Step 3: Use everyday moments**
+
+Talking about bodies doesn\'t need to be a formal sit-down conversation. It works better when woven into everyday life.
+
+While washing up, setting the table, or walking to school, you can casually bring things up:
+- "I noticed in that movie the character had a hard time saying no—how would you feel in that situation?"
+- "Your body is growing, and that\'s totally normal. Have you noticed any changes?"
+- "What do you think about how those characters treated each other?"
+
+These short, casual interactions teach respect, consent, and self-awareness naturally—without the pressure of a "big talk."
+
+**Step 4: Create a safe space**
+
+Children are learning not just about bodies, but about emotions, social signals, and where their boundaries are.
+
+After a social situation that seemed to affect them, ask gently: "How did that feel for you?" Don\'t rush to fix or advise—just listen.
+
+Encourage them to share by asking open questions: "If someone touches you and it doesn\'t feel right, it\'s okay to say no—and you can always tell me."
+
+**Step 5: It\'s okay if you feel awkward**
+
+If talking about bodies feels uncomfortable for you, that\'s normal. Many of us didn\'t grow up with these conversations modeled well.
+
+You don\'t have to hide your awkwardness. You can acknowledge it lightly: "This is a bit tricky to talk about, but I\'m glad you asked."
+
+Children notice when we avoid topics. But when they see you respond honestly—even imperfectly—they learn it\'s safe to be curious.
+
+**Step 6: Respect privacy while staying available**
+
+Some questions will be whispered. Some will be shouted across the room at the worst possible moment. Both are normal.
+
+Give your child the space to ask privately when they need it. A small, attentive moment often matters more than a long, planned talk.
+
+Let them know—through your responses over time—that they can always come to you.
+
+Some families use a "question jar" or a code phrase. Others simply say, "You can always ask me anything, even if it feels weird." Then follow through.
+
+**Try this:** This week, notice when your child asks something that feels vulnerable or curious. Resist the urge to deflect. Respond calmly and briefly. You\'re building a foundation where they feel safe asking the hard questions.`,
+    category: 'bodies-consent',
+    readTime: 6,
+    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
+  },
+  {
+    id: 'understanding-overindulgence',
+    title: 'What Actually "Spoils" a Child',
+    excerpt: 'Research shows materialism isn\'t caused by too many gifts—it\'s how you give them. When gifts are tied to behavior or emotion, kids learn that things equal love.',
+    content: `Many parents worry that giving too many gifts will spoil their children. But research tells a more nuanced story.
+
+Researchers have identified three distinct types of overindulgence:
+
+**Material overindulgence:** Excessive toys, gifts, treats, electronics, clothing, or luxury items. This is what most parents worry about.
+
+**Relational overindulgence:** Being overprotective, over-involved, solving problems for kids, treating them like a peer rather than a child you\'re guiding.
+
+**Behavioral overindulgence:** Having low expectations, lacking consequences or discipline, having few rules or limits, shielding kids from results of their behavior.
+
+**Here\'s what research actually finds:**
+
+Relational and behavioral overindulgence are linked to worse outcomes than material overindulgence. In fact, research doesn\'t consistently find that material overindulgence alone leads to negative outcomes.
+
+One study found that material overindulgence from mothers was actually linked to *less* stress and depression in children—while behavioral indulgence was linked to *more* anxiety and depression.
+
+**What actually creates materialism:**
+
+Materialism isn\'t about having things. It\'s believing that things bring happiness.
+
+Research shows that when parents use material items as rewards, punishments, or emotional stand-ins—"I got you this because you were good" or "I got you this because I felt bad"—their children are more likely to become materialistic.
+
+The message becomes: things equal love, things equal worth.
+
+**How to avoid materialism while being generous:**
+
+1. **Give gifts freely, not as rewards or punishments.** Separate gift-giving from behavior.
+
+2. **Maintain behavioral boundaries even during holidays.** The number of gifts isn\'t the problem—lack of limits is.
+
+3. **Talk openly about money and privilege.** Help kids understand that gifts are a privilege, not an entitlement. Money is earned, spent, and saved with intention.
+
+4. **Build self-esteem to counter materialism.** Children with higher self-esteem are less likely to seek identity through possessions. Praise effort and hard work, not just results. Let them problem-solve. Give them real responsibilities.
+
+5. **Examine why you want to indulge.** Understand your own patterns. Did your parents over-give or withhold? Are you giving what you wished you\'d received? This awareness helps you make more intentional choices.
+
+6. **Use the "Test of Four."** Before a big indulgence, ask:
+   - Will this keep my child from learning something they need to learn?
+   - Will this use a disproportionate amount of family resources?
+   - Will this benefit me more than my child?
+   - Will this harm others, the community, or the environment?
+
+7. **Ask your child how it feels.** Kids and parents often have different perceptions of indulgence. When children feel like they\'re getting "too much," that perception is linked to lower life satisfaction. Check in: "How did that feel? Was it fun?"
+
+8. **Avoid using Santa/gifts for behavior management.** Using Santa\'s list to motivate behavior teaches kids that gifts are rewards—which research links to developing materialistic values.
+
+**Try this:** This week, notice your own relationship with giving. What need does it meet in you? Then reflect: are my gifts freely given, or am I using them to manage behavior or emotion?`,
+    category: 'gifts',
+    readTime: 6,
+    inspiredBy: 'Dr. Cara Goodwin',
+  },
+  {
+    id: 'perfectionism-and-failure',
+    title: 'My Kid Is Obsessed With Being Perfect',
+    excerpt: 'Beneath perfectionism is usually fear—of failure or losing approval. Dismissing the feeling doesn\'t help. Acknowledge what they wanted and model imperfection.',
+    content: `When your child melts down because their tower fell or their drawing isn\'t "right," it looks like overreaction. But beneath perfectionism is usually fear—fear of failure, fear of disappointment, or fear of losing your approval.
+
+It doesn\'t help to dismiss their feeling by saying "I like your drawing, it\'s great!" They know it\'s not what they wanted. Now they feel unseen on top of feeling disappointed.
+
+**What to do when calm:**
+
+**1. Acknowledge the feeling.** "It\'s hard when things don\'t look how you expected." You\'re not fixing it or minimizing it—you\'re naming what\'s true.
+
+**2. Model imperfection.** Show them what it looks like to mess up and keep going. "I messed up. I\'m going to try again." Let them see that mistakes don\'t end the world or break connection.
+
+**3. Bring them back to safety.** "You wanted it to be perfect, and it\'s hard when it\'s not. Come back when your body feels calmer." You\'re validating the desire while not reinforcing that perfection is required.
+
+**The bigger picture:**
+
+The goal isn\'t to talk them out of caring about quality. It\'s to help them see that imperfection is survivable, that mistakes are part of the process, and that their worth isn\'t tied to the outcome.
+
+This comes from repeated messages:
+- "Mistakes are how we learn"
+- "I love you whether it\'s perfect or not"
+- "Trying hard matters more than getting it right"
+- "I mess up all the time, and I\'m still okay"
+
+**Try this:** Next time they\'re upset about something not turning out right, resist the urge to fix or reassure. Instead: "It\'s hard when things don\'t look how you expected. You wanted it to be different." Let the disappointment exist. Later, model your own imperfection openly.`,
+    category: 'mindset',
+    readTime: 3,
+    inspiredBy: 'Seed & Sew',
+  },
+  {
+    id: 'self-worth-vs-confidence',
+    title: 'Self-Worth vs. Self-Confidence',
+    excerpt: 'Self-confidence is "I can do this." Self-worth is deeper: "I am enough, even when I fail." When kids are only praised for achievements, their value becomes tied to performance.',
+    content: `All parents want their children to grow up feeling strong and secure. But sometimes we focus more on what our children can do than on who they are.
+
+**Self-confidence** is the belief in your abilities. It grows when a child learns a new skill, takes on a challenge, or succeeds at something they worked hard for. It says, "I can do this."
+
+**Self-worth** is deeper. It\'s the quiet knowing that you have value just because you exist. It says, "I am enough—even when I fail, even when I struggle." Self-worth is not earned. It is felt.
+
+**Why the difference matters:**
+
+When children are only praised for what they achieve—good grades, sports wins, creative talents—their sense of value becomes tied to performance. They may grow up believing that love and approval must be earned. That they\'re lovable only when they succeed.
+
+But when we acknowledge who they are—their thoughtfulness, their curiosity, their way of trying again after something hard—we nurture self-worth. We help them feel seen for their *being*, not just their *doing*.
+
+**How to build both:**
+
+We can support both. We can celebrate their efforts AND make space for their emotions. We can encourage independence AND stay close when they falter. We can help them grow without sending the message that they need to be more to be enough.
+
+**Praise effort, not talent:**
+Instead of: "You\'re so smart!"
+Say: "You worked really hard at that"
+
+Instead of: "You\'re naturally talented!"
+Say: "I love how you kept trying even when it was difficult"
+
+**Acknowledge who they are:**
+"I love how thoughtful you were with your sister"
+"I noticed you kept trying even when it was hard—that takes courage"
+"You were kind to that friend who felt left out"
+
+**Model self-acceptance:**
+
+Perhaps most importantly, we can reflect on how we speak about our own worth. Children listen closely to the way we talk about ourselves.
+
+If we model self-acceptance, they learn that worth doesn\'t depend on constant success. It grows in connection, honesty, and belonging.
+
+**Try this:** This week, notice how you praise your child. Are most comments about what they did (achievements)? Try adding praise for who they are: how they treated someone, what character trait they showed, what value they demonstrated.`,
+    category: 'mindset',
+    readTime: 4,
+    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
+  },
+  {
+    id: 'mattering-psychological-shield',
+    title: 'Why "Mattering" Protects Kids',
+    excerpt: 'Children who thrive despite pressure share a feeling that they matter for who they are. This sense of "mattering" acts as a protective psychological shield for resilience.',
+    content: `Research on resilience suggests that the concept of "mattering"—feeling valued and having an opportunity to add value to the world—acts as a psychological shield.
+
+Children who thrive, despite immense pressure, share this: they believe they matter for who they are at their core, not just for their accomplishments.
+
+**The SAID Framework for Building Mattering:**
+
+**S - Significant:** Feeling important and prioritized, not just in big moments, but in the small, mundane details of daily life. It\'s about feeling truly seen and known.
+
+Examples: Making eye contact when they talk to you, remembering what they told you yesterday, noticing what they care about.
+
+**A - Appreciated:** Go beyond thanking someone for a deed and appreciate the *doer* behind the deed. This reinforces their core worth.
+
+Instead of: "Thanks for helping!"
+Say: "I noticed you helped without being asked. That shows you care about this family"
+
+**I - Invested In:** Having people in your life who are genuinely invested in your success and goals. AND being the investor for others—tapping into the "free joy" of their wins.
+
+Make time for what matters to them. Show up for their interests. Celebrate their wins with genuine enthusiasm.
+
+**D - Depended On:** Feeling needed by others. Allowing people to rely on you in healthy ways and welcoming the friction in human relationships that creates meaning and resilience.
+
+Let your child help in real, meaningful ways. Not token tasks—real contributions that matter to the household.
+
+**Practical ways to build mattering:**
+
+*Commit to one small need.* Every morning, ask yourself: What is one small need I have today that I need to meet so I can show up as my best self for the people I care about? By tending to your own needs, you model self-worth.
+
+*Chores as citizenship.* Reject the idea that your child can\'t be a contributing member of the household. Set chores that make your child feel like they\'re adding value in significant ways. This is how we raise future citizens of the world.
+
+*"Better for others."* In a high-achieving culture, shift the focus from personal rank to contribution. Help your kids understand: "Not better than others, but better for others." They\'re succeeding not just for themselves, but to put their gifts out into the world.
+
+**Try this:** This week, look for one way to help your child feel "depended on"—a real responsibility where they contribute meaningfully to the family. Not a token task, but something that matters. Notice what it does for their sense of significance.`,
+    category: 'mindset',
+    readTime: 4,
+    inspiredBy: 'Dr. Aliza Pressman',
+  },
+  {
+    id: 'big-changes-coming-up',
+    title: 'Big Changes Are Coming Up',
+    excerpt: 'Big events are easier when kids know what\'s coming. Preparation isn\'t a one-time conversation—it\'s repetition, visual aids, and respect for their fears.',
+    content: `A new sibling, a doctor\'s appointment, starting school, a move—big events are easier when kids know what\'s coming. Their brains do better with predictability, and preparation reduces the anxiety of the unknown.
+
+**Step 1: Start early and repeat**
+
+Begin talking about it days or even weeks before. Don\'t expect one conversation to be enough. Bring it up regularly—repetition helps them adjust.
+
+"Remember, next week we\'re starting at the new school. We\'ll park, walk to the classroom, and find your cubby."
+
+Being scared is okay. They can work through that over time with your support.
+
+**Step 2: Use visual aids**
+
+If they have a dentist appointment and it\'s their first time, make or find pictures of:
+- The waiting room
+- Sitting in the chair
+- The tools the dentist might use
+- What the dentist might do
+
+Making the unknown familiar reduces fear significantly.
+
+**Step 3: Show respect through narration**
+
+We move children around a lot without their consent—picking them up, putting them in car seats, bringing them to the bath.
+
+The least we can do is show respect by telling them where they\'re going.
+
+"I\'m going to pick you up now and bring you to the bathroom."
+"We\'re putting on your seatbelt so we can go to the grocery store."
+
+This simple narration honors their autonomy and reduces anxiety.
+
+**Step 4: Amplify their voice**
+
+If you see them shake their head when someone approaches, or pull away from touch, stop. Give them a voice when they\'re uncomfortable with strangers or new situations—always be on the kid\'s side.
+
+"She takes time to warm up to new faces. I\'ll say hi for her."
+
+You\'ve protected them and shown them what boundary-setting looks like.
+
+**Step 5: Prepare them for emotions**
+
+Preparation isn\'t about eliminating fear—it\'s about making the unknown manageable and showing your child that you\'ll help them through it.
+
+"You might feel scared, and that\'s okay. I\'ll be right there."
+"This will feel new and strange at first, and then you\'ll get used to it."
+"Some kids cry the first day. That\'s normal."
+
+**Try this:** For an upcoming new experience, start talking about it days ahead. Describe what they\'ll see, who they\'ll meet, what will happen. Let them ask questions, express fear, and revisit it multiple times before the day arrives.`,
+    category: 'transitions',
+    readTime: 4,
+    inspiredBy: 'Tiny Humans, Big Emotions by Alyssa Blask Campbell',
+  },
+  {
+    id: 'our-relationship-affects-our-kids',
+    title: 'Our Relationship Affects Our Kids',
+    excerpt: 'The way you communicate with your partner directly shapes how your children experience family life. The effort you put into your partnership is also an investment in their future.',
+    content: `It\'s easy to focus all your parenting energy on your children—getting them to school, managing meltdowns, navigating bedtime. But one of the most overlooked aspects of family life is the relationship between you and your partner.
+
+The way you communicate, manage stress, and resolve conflict with each other directly shapes how your children experience family life.
+
+**What research shows:**
+
+When parents improve their relationship dynamics, children show fewer emotional and behavioral symptoms—less anxiety, sadness, and even fewer physical complaints like headaches and stomach aches.
+
+Your children are watching how you handle challenges together. That\'s parenting too.
+
+**Small tensions add up:**
+
+Relationships aren\'t just shaped by major arguments. It\'s the subtle moments—a sharp remark about chores, a misunderstanding when you\'re tired, an automatic reaction to stress—that set the tone.
+
+When left unchecked, these small interactions create a habit of reaction rather than response. One partner feels unheard, the other feels misunderstood, and resentment builds quietly.
+
+**Before you assume it\'s them:**
+
+Much of the tension in relationships comes from unmet needs or unexpressed emotions—often from long before your current relationship.
+
+Maybe your partner\'s frustration reminds you of how you were treated as a child. Maybe an offhand comment triggers feelings of inadequacy you\'ve carried for years.
+
+In these moments, the situation may not be about your partner at all.
+
+When we pause to consider our own emotional patterns, we open up the possibility for healthier conversations and deeper understanding.
+
+**When you feel tension rising:**
+
+Take a breath and count slowly before you speak. This brief pause allows you to process your emotions and choose a response rather than a reaction.
+
+It\'s a small shift, but it changes the trajectory of the conversation. You\'re no longer acting out of frustration—you\'re responding with intention.
+
+**How to fight better:**
+
+Before jumping into problem-solving or defending yourself, try acknowledging your partner\'s feelings first.
+
+Something as simple as "I can see you\'re upset, and I understand why you might feel that way" can change the entire tone.
+
+It shifts from adversarial to collaborative. Acknowledgment doesn\'t mean you agree. It means their experience matters to you.
+
+**Use "I" statements:**
+
+Instead of: "You never listen"
+Say: "I feel unheard when we have these discussions"
+
+You\'re expressing your experience without attacking.
+
+**Assume positive intent:**
+
+When disagreements arise, it\'s easy to assume the worst. But maybe they\'re overwhelmed. Maybe they\'re carrying stress you can\'t see. Maybe their intention was good even if the execution wasn\'t.
+
+Approaching your partner with curiosity rather than accusation changes everything.
+
+**Consistency builds trust:**
+
+When your partner knows you\'ll approach conflicts with calm and respect—even when things are hard—it creates safety.
+
+This consistency doesn\'t happen overnight. It\'s built through repeated small moments where you choose thoughtful response over reactive behavior.
+
+Pick one practice—pausing, acknowledging, using "I" statements—and commit to it for a week. Consistency in small things builds trust in big ones.
+
+**Your kids are learning:**
+
+Every time you and your partner navigate a disagreement, your children are learning. They\'re watching how you handle frustration, how you repair after conflict, how you speak to each other when things are hard.
+
+By responding with empathy and understanding—even imperfectly—you\'re teaching them emotional regulation, respect, and what healthy relationships look like.
+
+After you work through a disagreement well, name it for your kids if appropriate: "We disagreed about something, and we talked it through. That\'s how we figure things out."
+
+**Try this:** This week, notice one moment of tension with your partner. Instead of focusing on the disagreement itself, ask yourself: What are my kids learning about relationships from how we\'re handling this?`,
+    category: 'partner-communication',
+    readTime: 6,
+    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
+  },
+  {
+    id: 'my-kids-wont-stop-fighting',
+    title: 'My Kids Won\'t Stop Fighting',
+    excerpt: 'Stepping in as referee usually backfires. Instead, start with regulation (not resolution), name the underlying need, and guide them toward solving it together.',
+    content: `When your kids are fighting, the instinct is to figure out who started it and make them apologize. But stepping in as referee usually backfires—someone feels blamed, nobody learns anything, and you\'re exhausted.
+
+Try being a guide instead. Your job isn\'t to resolve it *for* them, it\'s to help them work through it *together*.
+
+**Step 1: Regulate, don\'t resolve**
+
+Everyone\'s escalated. Solving the problem comes *after* the nervous systems settle, not before.
+
+"Let\'s pause and take a breath before solving this."
+
+This simple pause can prevent bigger meltdowns.
+
+**Step 2: Name the need underneath**
+
+Once they\'re calmer, name what you observe: "Looks like you both want to play with this."
+
+This helps kids connect their actions to feelings, which builds emotional literacy. It also reframes the situation from "you\'re being mean to each other" to "you have the same need."
+
+**Step 3: Invite collaboration**
+
+"We\'re all on the same team. How can we make this work for both of you?"
+
+If they\'re stuck, offer to provide an idea—but let them try first.
+
+**Step 4: Skip the blame game**
+
+Don\'t ask "who started it." That leads to defensive arguments, not problem-solving.
+
+Instead: "What were you each wanting?"
+
+**When a sensory mismatch is the real problem:**
+
+Sometimes sibling conflict is actually a sensory mismatch. One child needs more input, another needs less. When their needs clash, conflict is almost guaranteed.
+
+A sensory-sensitive child wants quiet and space. A sensory-seeking sibling is talking, moving, and touching nonstop. Every car ride ends the same way: poking, teasing, hitting, screaming.
+
+**Before addressing the behavior, meet the sensory needs:**
+
+For a sensory-sensitive child: Headphones to manage sound, a designated quiet space, permission to look out the window.
+
+For a sensory-seeking child: Fidgets, music through their own headphones, something to squeeze or manipulate.
+
+When both kids have their needs met proactively, the conflict often decreases dramatically.
+
+**The goal:**
+
+It\'s not forced apologies or forced sharing. It\'s building their awareness and empowerment to participate in collaboration and connection.
+
+Over time, kids learn that they can solve problems together without adult intervention.
+
+**Try this:** Next sibling conflict, skip "who started it." Instead: "Let\'s pause and take a breath. What was each of you wanting?" Then ask: "How can we make this work for both of you?"`,
+    category: 'siblings',
+    readTime: 4,
+    inspiredBy: 'Seed & Sew',
+  },
+  {
+    id: 'when-saying-nothing-says-a-lot',
+    title: 'When Saying Nothing Says a Lot',
+    excerpt: 'Even when we say nothing, we\'re communicating. Children notice what we say—and what we don\'t. Creating space for hard conversations keeps connection open.',
+    content: `One thing that shapes connection more than we realize is silence—not the kind we choose because it feels peaceful, but the kind that appears when something is left hanging.
+
+In parenting, this might be:
+- The moment we don\'t answer a difficult question
+- When we avoid a subject
+- When we hope a reaction will pass without being addressed
+
+But even when we say nothing, we are still communicating. And children, especially, are very sensitive to that.
+
+They notice what we say—and what we don\'t say. They often sense more than we realize.
+
+**Why silence matters:**
+
+When you don\'t respond to something your child said, they might hear:
+- "That\'s not important"
+- "I don\'t want to talk about it"
+- "You shouldn\'t have asked that"
+- "I\'m not a safe person for this"
+
+**We won\'t always have the right words.**
+
+But we can still show up in ways that feel clear, respectful, and kind—especially when we come back later and repair if something was missed.
+
+**Ways to handle moments when words are hard:**
+
+- **Questions are bids for closeness.** Even if you\'re unsure how to answer, say: "That\'s a good question" or "Let\'s talk about it together." This keeps the connection open.
+
+- **If you need time, say so.** "I need a moment to think before I answer" helps kids feel safe and not ignored.
+
+- **After conflict, silence can feel like distance.** A simple "That was hard for both of us" lets them know you\'re still emotionally available.
+
+- **Watch what your body is saying.** Kids pick up on tone, gestures, or lack of response. Eye contact or a gentle touch can say "I am here."
+
+- **You can always return later.** If you missed something in the moment, come back: "I\'ve been thinking about what you said earlier. Can we talk about it?"
+
+**Try this:** Think of a recent moment where you avoided a topic or didn\'t respond to something your child said. Go back and reopen it: "I\'ve been thinking about what you asked me earlier. Can we talk about it?" That builds trust over time.`,
+    category: 'communication',
+    readTime: 4,
+    inspiredBy: 'Iben Sandahl, The Danish Way of Parenting',
   },
 ];
 
@@ -911,7 +1283,7 @@ export const LESSON_CATEGORIES = {
   regulation: { label: 'Regulation', color: 'bg-amber-50', borderColor: 'border-amber-200' },
   boundaries: { label: 'Boundaries', color: 'bg-pink-50', borderColor: 'border-pink-200' },
   play: { label: 'Play & Boredom', color: 'bg-blue-50', borderColor: 'border-blue-200' },
-  gifts: { label: 'Gifts & Generosity', color: 'bg-purple-50', borderColor: 'border-purple-200' },
+  gifts: { label: 'Gifts & Values', color: 'bg-purple-50', borderColor: 'border-purple-200' },
   mindset: { label: 'Mindset', color: 'bg-teal-50', borderColor: 'border-teal-200' },
   communication: { label: 'Communication', color: 'bg-green-50', borderColor: 'border-green-200' },
   'partner-communication': { label: 'Partner Communication', color: 'bg-rose-50', borderColor: 'border-rose-200' },
