@@ -90,14 +90,11 @@ export default function LearnPage() {
                 <div className="border-2 border-gray-200 bg-white hover:border-gray-300 rounded-2xl p-4 space-y-2">
                   {/* Header */}
                   <div className="flex items-start justify-between gap-3">
-                    <div className="flex items-start gap-3 flex-1">
-                      <span className="text-2xl flex-shrink-0">{lesson.icon}</span>
-                      <div className="flex-1">
-                        <h3 className="font-black text-gray-900 leading-tight text-base">
-                          {lesson.title}
-                        </h3>
-                        <p className="text-sm text-gray-600 mt-1 line-clamp-2">{lesson.excerpt}</p>
-                      </div>
+                    <div className="flex-1">
+                      <h3 className="font-black text-gray-900 leading-tight text-base">
+                        {lesson.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 mt-1 line-clamp-2">{lesson.excerpt}</p>
                     </div>
                     <ChevronDown size={20} className="flex-shrink-0 text-gray-400" />
                   </div>
@@ -125,15 +122,12 @@ export default function LearnPage() {
           <div className="bg-white rounded-t-3xl w-full max-h-[90vh] overflow-y-auto p-6 space-y-6">
             {/* Header */}
             <div className="flex items-start justify-between gap-3">
-              <div className="flex items-start gap-3 flex-1">
-                <span className="text-3xl">{selectedLesson.icon}</span>
-                <div>
-                  <h2 className="text-2xl font-black text-gray-900">{selectedLesson.title}</h2>
-                  <p className="text-sm text-gray-600 mt-1">
-                    {LESSON_CATEGORIES[selectedLesson.category].label} •{' '}
-                    {selectedLesson.readTime} min read
-                  </p>
-                </div>
+              <div className="flex-1">
+                <h2 className="text-2xl font-black text-gray-900">{selectedLesson.title}</h2>
+                <p className="text-sm text-gray-600 mt-1">
+                  {LESSON_CATEGORIES[selectedLesson.category].label} •{' '}
+                  {selectedLesson.readTime} min read
+                </p>
               </div>
               <button
                 onClick={() => setExpandedLessonId(null)}
